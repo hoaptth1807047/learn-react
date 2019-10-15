@@ -4,10 +4,10 @@ import {compose} from 'recompose';
 
 import {withFirebase} from '../Firebase';
 import * as ROUTES from '../constants/routes';
+import '../../../src/css/signup.css'
 
 const SignUpPage = () => (
     <div>
-        <h1>Sign Up</h1>
         <SignUpForm/>
     </div>
 );
@@ -38,7 +38,7 @@ class SignUpFormBase extends Component {
                         email,
                     });
             })
-            .then( () => {
+            .then(() => {
                 this.setState({...INITIAL_STATE});
                 this.props.history.push(ROUTES.HOME);
             })
@@ -67,36 +67,48 @@ class SignUpFormBase extends Component {
             username === '';
         return (
             <form onSubmit={this.onSubmit}>
-                <input
-                    name="username"
-                    value={username}
-                    onChange={this.onChange}
-                    type="text"
-                    placeholder="Full Name"
-                />
-                <input
-                    name="email"
-                    value={email}
-                    onChange={this.onChange}
-                    type="text"
-                    placeholder="Email Address"
-                />
-                <input
-                    name="passwordOne"
-                    value={passwordOne}
-                    onChange={this.onChange}
-                    type="password"
-                    placeholder="Password"
-                />
-                <input
-                    name="passwordTwo"
-                    value={passwordTwo}
-                    onChange={this.onChange}
-                    type="password"
-                    placeholder="Confirm Password"
-                />
-                <button disabled={isInvalid} type="submit">Sign Up</button>
-                {error && <p>{error.message}</p>}
+                <section className="home-slider owl-carousel img signUpPage">
+                    <div className="slider-item">
+                        <div className="overlay"/>
+                        <div className="container">
+                            <div className="row slider-text justify-content-center align-items-center">
+                                <div className="signup">
+                                    <h2>Sign Up</h2>
+                                    <input
+                                        name="username"
+                                        value={username}
+                                        onChange={this.onChange}
+                                        type="text"
+                                        placeholder="Full Name"
+                                    />
+                                    <input
+                                        name="email"
+                                        value={email}
+                                        onChange={this.onChange}
+                                        type="text"
+                                        placeholder="Email Address"
+                                    />
+                                    <input
+                                        name="passwordOne"
+                                        value={passwordOne}
+                                        onChange={this.onChange}
+                                        type="password"
+                                        placeholder="Password"
+                                    />
+                                    <input
+                                        name="passwordTwo"
+                                        value={passwordTwo}
+                                        onChange={this.onChange}
+                                        type="password"
+                                        placeholder="Confirm Password"
+                                    />
+                                    <button disabled={isInvalid} type="submit">Sign Up</button>
+                                    {error && <p>{error.message}</p>}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </form>
         );
     }

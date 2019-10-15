@@ -53,7 +53,7 @@ const UserList = ({users}) => (
         </span>
                 <span>
           <strong>Username:</strong> {user.username}
-        </span>
+            </span>
             </li>
         ))}
     </ul>
