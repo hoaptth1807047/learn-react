@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import {compose} from 'recompose';
-import {SignUpLink} from '../SignUp/signup';
 import {withFirebase} from '../Firebase';
 import * as ROUTES from '../constants/routes';
 import '../../../src/css/signin.css'
@@ -44,40 +43,42 @@ class SignInFormBase extends Component {
         const {email, password, error} = this.state;
         const isInvalid = password === '' || email === '';
         return (
-            <form onSubmit={this.onSubmit}>
-                <section className="home-slider owl-carousel img signInPage">
-                    <div className="slider-item">
-                        <div className="container">
-                            <div className="row slider-text justify-content-center align-items-center">
-                                <div className="signin">
-                                    <h2>Sign In</h2>
-                                    <input
-                                        name="email"
-                                        value={email}
-                                        onChange={this.onChange}
-                                        type="text"
-                                        placeholder="Email Address"
-                                    />
-                                    <input
-                                        name="password"
-                                        value={password}
-                                        onChange={this.onChange}
-                                        type="password"
-                                        placeholder="Password"
-                                    />
-                                    <button disabled={isInvalid} type="submit">
-                                        Sign In
-                                    </button>
-                                    <div className="button-content">
-                                        Don't have an account? <Link to={ROUTES.SIGN_UP}> Sign Up </Link>
+            <div>
+                <form onSubmit={this.onSubmit}>
+                    <section className="home-slider owl-carousel img signInPage">
+                        <div className="slider-item">
+                            <div className="container">
+                                <div className="row slider-text justify-content-center align-items-center">
+                                    <div className="signin">
+                                        <h2>Sign In</h2>
+                                        <input
+                                            name="email"
+                                            value={email}
+                                            onChange={this.onChange}
+                                            type="text"
+                                            placeholder="Email Address"
+                                        />
+                                        <input
+                                            name="password"
+                                            value={password}
+                                            onChange={this.onChange}
+                                            type="password"
+                                            placeholder="Password"
+                                        />
+                                        <button disabled={isInvalid} type="submit">
+                                            Sign In
+                                        </button>
+                                        <div className="button-content">
+                                            Don't have an account? <Link to={ROUTES.SIGN_UP}> Sign Up </Link>
+                                        </div>
+                                        {error && <p>{error.message}</p>}
                                     </div>
-                                    {error && <p>{error.message}</p>}
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-            </form>
+                    </section>
+                </form>
+            </div>
         );
     }
 }
