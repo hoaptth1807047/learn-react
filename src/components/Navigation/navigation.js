@@ -34,7 +34,7 @@ const NavigationAuth = () => (
                         <li className="nav-item"><a href="" className="nav-link">
                             <Link to={ROUTES.BLOG}>Blog</Link></a></li>
                         <li className="nav-item"><a href="" className="nav-link">
-                            <Link to={ROUTES.ABOUT}>About</Link>About</a></li>
+                            <Link to={ROUTES.ABOUT}>About</Link></a></li>
                         <li className="nav-item"><a href="" className="nav-link">
                             <Link to={ROUTES.CONTACT}>Contact</Link></a></li>
                         <li className="nav-item"><a className="nav-link">
@@ -83,4 +83,5 @@ const NavigationNonAuth = () => (
     </nav>
     </div>
 );
+
 export default Navigation;
