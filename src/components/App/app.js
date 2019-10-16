@@ -8,6 +8,11 @@ import Navigation from '../Navigation/navigation';
 import SignUpPage from '../SignUp/signup';
 import SignInPage from '../SignIn/signin';
 import { withFirebase } from '../Firebase';
+import MenuPage from '../Menu/menu';
+import ServicesPage from '../Services/services';
+import AboutPage from '../About/about';
+import ContactPage from '../Contact/contact';
+import BlogPage from '../Blog/blog';
 // import PasswordForgetPage from '../PasswordForget';
 // import HomePage from '../Home';
 // import AccountPage from '../Account';
@@ -44,6 +49,11 @@ class App extends Component {
                 </div>
                 <div>
                     <Route path={ROUTES.HOME} component={HomePage}/>
+                    <Route path={ROUTES.MENU} component={MenuPage}/>
+                    <Route path={ROUTES.SERVICES} component={ServicesPage}/>
+                    <Route path={ROUTES.ABOUT} component={AboutPage}/>
+                    <Route path={ROUTES.CONTACT} component={ContactPage}/>
+                    <Route path={ROUTES.BLOG} component={BlogPage}/>
                     <Route path={ROUTES.SIGN_UP} component={SignUpPage}/>
                     <Route path={ROUTES.SIGN_IN} component={SignInPage}/>
                 </div>

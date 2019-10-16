@@ -27,18 +27,18 @@ const NavigationAuth = () => (
                             <Link to={ROUTES.HOME}>Home</Link>
                         </a>
                         </li>
-                        <li className="nav-item"><a href="" className="nav-link">Menu</a></li>
-                        <li className="nav-item"><a href=""
-                                                    className="nav-link">Services</a></li>
-                        <li className="nav-item"><a href="" className="nav-link">Blog</a></li>
-                        <li className="nav-item"><a href="" className="nav-link">About</a>
-                        </li>
-                        <li className="nav-item"><a href="" className="nav-link">Contact</a>
-                        </li>
+                        <li className="nav-item"><a href="" className="nav-link">
+                            <Link to={ROUTES.MENU}>Menu</Link></a></li>
+                        <li className="nav-item"><a href="" className="nav-link">
+                            <Link to={ROUTES.SERVICES}>Services</Link></a></li>
+                        <li className="nav-item"><a href="" className="nav-link">
+                            <Link to={ROUTES.BLOG}>Blog</Link></a></li>
+                        <li className="nav-item"><a href="" className="nav-link">
+                            <Link to={ROUTES.ABOUT}>About</Link>About</a></li>
+                        <li className="nav-item"><a href="" className="nav-link">
+                            <Link to={ROUTES.CONTACT}>Contact</Link></a></li>
                         <li className="nav-item"><a className="nav-link">
-                            <SignOutButton/>
-                        </a>
-                        </li>
+                            <SignOutButton/></a></li>
                     </ul>
                 </div>
             </div>
@@ -48,9 +48,10 @@ const NavigationAuth = () => (
 
 const NavigationNonAuth = () => (
     <div>
+        {/*style={{margin: "-33px 0 0 0 "}}*/}
         <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div className="container">
-            <div className="navbar-brand" href=""><span
+            <div className="navbar-brand"><span
                 className="flaticon-pizza-1 mr-1"/>
                 Cowboy <br/><small>Jack</small>
             </div>
@@ -61,21 +62,21 @@ const NavigationNonAuth = () => (
             <div className="collapse navbar-collapse" id="ftco-nav">
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item active"><a className="nav-link">
-                        <Link to={ROUTES.HOME}>Home</Link>
-                    </a>
-                    </li>
-                    <li className="nav-item"><a href="" className="nav-link">Menu</a></li>
-                    <li className="nav-item"><a href=""
-                                                className="nav-link">Services</a></li>
-                    <li className="nav-item"><a href="" className="nav-link">Blog</a></li>
-                    <li className="nav-item"><a href="" className="nav-link">About</a>
-                    </li>
-                    <li className="nav-item"><a href="" className="nav-link">Contact</a>
-                    </li>
+                        <Link to={ROUTES.HOME}>Home</Link></a></li>
+                    <li className="nav-item"><a href="" className="nav-link">
+                        <Link to={ROUTES.MENU}>Menu</Link></a></li>
+                    <li className="nav-item"><a href="" className="nav-link">
+                        <Link to={ROUTES.SERVICES}>Services</Link></a></li>
+                    <li className="nav-item"><a href="" className="nav-link">
+                        <Link to={ROUTES.BLOG}>Blog</Link></a></li>
+                    <li className="nav-item"><a href="" className="nav-link">
+                        <Link to={ROUTES.ABOUT}>About</Link>About</a></li>
+                    <li className="nav-item"><a href="" className="nav-link">
+                        <Link to={ROUTES.CONTACT}>Contact</Link></a></li>
                     <li className="nav-item"><a className="nav-link">
-                        <Link to={ROUTES.SIGN_IN}>Sign In</Link>
-                    </a>
-                    </li>
+                        <Link to={ROUTES.SIGN_IN}>Sign In</Link></a></li>
+                    <li className="nav-item"><a className="nav-link">
+                        <Link to={ROUTES.SIGN_UP}>Sign Up</Link></a></li>
                 </ul>
             </div>
         </div>
