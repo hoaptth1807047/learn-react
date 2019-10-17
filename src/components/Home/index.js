@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import * as ROUTES from "../constants/routes";
 import {Link} from "react-router-dom";
+import {GALLERY} from "../constants/routes";
 
 class HomePage extends Component {
     render() {
@@ -32,39 +33,47 @@ class HomePage extends Component {
                     </div>
 
                     {/*<div className="slider-item">*/}
-                    {/*    <div className="overlay" />*/}
+                    {/*    <div className="overlay"/>*/}
                     {/*    <div className="container">*/}
                     {/*        <div className="row slider-text align-items-center" data-scrollax-parent="true">*/}
                     {/*            <div className="col-md-6 col-sm-12 order-md-last ftco-animate">*/}
                     {/*                <span className="subheading">Crunchy</span>*/}
                     {/*                <h1 className="mb-4">Italian Pizza</h1>*/}
-                    {/*                <p className="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the*/}
+                    {/*                <p className="mb-4 mb-md-5">A small river named Duden flows by their place and*/}
+                    {/*                    supplies it with the*/}
                     {/*                    necessary regelialia.</p>*/}
-                    {/*                <p><a href="#" className="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a className="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">*/}
-                    {/*                    <Link to={ROUTES.MENU}>View Menu</Link></a></p>*/}
-                    {/*            </div>*/}
-                    {/*            <div className="col-md-6 ftco-animate">*/}
-                    {/*                <img src="../../images/bg_2.png" className="img-fluid" alt="" />*/}
-                    {/*            </div>*/}
-                    {/*        </div>*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
-                    
-                    {/*<div className="slider-item" style={{backgroundImage: 'url(../../public/images/bg_3.jpg)'}}>*/}
-                    {/*    <div className="overlay" />*/}
-                    {/*    <div className="container">*/}
-                    {/*        <div className="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">*/}
-                    {/*            <div className="col-md-7 col-sm-12 text-center ftco-animate">*/}
-                    {/*                <span className="subheading">Welcome</span>*/}
-                    {/*                <h1 className="mb-4">We cooked your desired Pizza Recipe</h1>*/}
-                    {/*                <p className="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the*/}
-                    {/*                    necessary regelialia.</p>*/}
-                    {/*                <p><a href="#" className="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="../Menu/menu.html" className="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View*/}
+                    {/*                <p><a href="#" className="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a*/}
+                    {/*                    href=""*/}
+                    {/*                    className="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View*/}
                     {/*                    Menu</a></p>*/}
                     {/*            </div>*/}
                     {/*            <div className="col-md-6 ftco-animate">*/}
-                    {/*                <img src="../../images/bg_2.png" className="img-fluid" alt="" />*/}
+                    {/*                <img src="../../images/bg_2.png" className="img-fluid" alt=""/>*/}
                     {/*            </div>*/}
+
+                    {/*        </div>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
+
+                    {/*<div className="slider-item" style={{backgroundImage: "url(" + '../../images/bg_3.jpg' + ")"}}>*/}
+                    {/*    <div className="overlay"/>*/}
+                    {/*    <div className="container">*/}
+                    {/*        <div className="row slider-text justify-content-center align-items-center"*/}
+                    {/*             data-scrollax-parent="true">*/}
+
+                    {/*            <div className="col-md-7 col-sm-12 text-center ftco-animate">*/}
+                    {/*                <span className="subheading">Welcome</span>*/}
+                    {/*                <h1 className="mb-4">We cooked your desired Pizza Recipe</h1>*/}
+                    {/*                <p className="mb-4 mb-md-5">A small river named Duden flows by their place and*/}
+                    {/*                    supplies it with the*/}
+                    {/*                    necessary regelialia.</p>*/}
+                    {/*                <p><a href="#" className="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a>*/}
+                    {/*                    <a*/}
+                    {/*                        href=""*/}
+                    {/*                        className="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View*/}
+                    {/*                        Menu</a></p>*/}
+                    {/*            </div>*/}
+
                     {/*        </div>*/}
                     {/*    </div>*/}
                     {/*</div>*/}
@@ -427,45 +436,35 @@ class HomePage extends Component {
                     <div className="container-wrap">
                         <div className="row no-gutters">
                             <div className="col-md-3 ftco-animate">
-                                <a href="gallery.html" className="gallery img d-flex align-items-center"
+                                <a href={ROUTES.GALLERY} className="gallery img d-flex align-items-center"
                                    style={{backgroundImage: "url(" + '../../images/gallery-1.jpg' + ")"}}>
-                                    <Link to={ROUTES.GALLERY}>
-                                        <div className="icon mb-4 d-flex align-items-center justify-content-center">
-                                            <span className="icon-search"/>
-                                        </div>
-                                    </Link>
+                                    <div className="icon mb-4 d-flex align-items-center justify-content-center">
+                                        <span className="icon-search"/>
+                                    </div>
                                 </a>
                             </div>
                             <div className="col-md-3 ftco-animate">
-                                <a href="gallery.html" className="gallery img d-flex align-items-center"
+                                <a href={ROUTES.GALLERY} className="gallery img d-flex align-items-center"
                                    style={{backgroundImage: "url(" + '../../images/gallery-2.jpg' + ")"}}>
-                                    <Link to={ROUTES.GALLERY}>
-                                        <div className="icon mb-4 d-flex align-items-center justify-content-center">
-                                            <span className="icon-search"/>
-                                        </div>
-                                    </Link>
+                                    <div className="icon mb-4 d-flex align-items-center justify-content-center">
+                                        <span className="icon-search"/>
+                                    </div>
                                 </a>
                             </div>
                             <div className="col-md-3 ftco-animate">
-                                <a href="gallery.html" className="gallery img d-flex align-items-center"
+                                <a href={ROUTES.GALLERY} className="gallery img d-flex align-items-center"
                                    style={{backgroundImage: "url(" + '../../images/gallery-3.jpg' + ")"}}>
-                                    <Link to={ROUTES.GALLERY}>
-                                        <div className="icon mb-4 d-flex align-items-center justify-content-center">
-                                            <span className="icon-search"/>
-                                        </div>
-                                    </Link>
+                                    <div className="icon mb-4 d-flex align-items-center justify-content-center">
+                                        <span className="icon-search"/>
+                                    </div>
                                 </a>
                             </div>
                             <div className="col-md-3 ftco-animate">
-                                <a href="gallery.html" className="gallery img d-flex align-items-center"
+                                <a href={{ROUTES: GALLERY}} className="gallery img d-flex align-items-center"
                                    style={{backgroundImage: "url(" + '../../images/gallery-4.jpg' + ")"}}>
-                                    <Link to={ROUTES.GALLERY}>
-                                        <div className="icon mb-4 d-flex align-items-center justify-content-center">
-                                            <span className="icon-search"/>
-                                        </div>
-                                    </Link>
-
-
+                                    <div className="icon mb-4 d-flex align-items-center justify-content-center">
+                                        <span className="icon-search"/>
+                                    </div>
                                 </a>
                             </div>
                         </div>

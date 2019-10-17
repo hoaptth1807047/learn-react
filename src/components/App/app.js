@@ -49,7 +49,7 @@ class App extends Component {
                     <Navigation authUser={this.state.authUser}/>
                     <hr/>
                 </div>
-                <Route path={ROUTES.HOME} component={HomePage}/>
+                <Route exact path={ROUTES.HOME} component={HomePage}/>
                 <Route path={ROUTES.MENU} component={MenuPage}/>
                 <Route path={ROUTES.SERVICES} component={ServicesPage}/>
                 <Route path={ROUTES.ABOUT} component={AboutPage}/>
