@@ -111,4 +111,5 @@ const NavigationNonAuth = () => (
         </div>
     </nav>
 );
+
 export default Navigation;
