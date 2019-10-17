@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
+import * as ROUTES from "../constants/routes";
+import {Link} from "react-router-dom";
 
 class HomePage extends Component {
     render() {
         return (
             <div>
                 <section className="home-slider owl-carousel img"
-                         style={{backgroundImage: "url(" + '../../images/bg_1.jpg' + ")", margin: "-33px 0 0 0"}}>
+                         style={{backgroundImage: "url(" + '../../images/bg_1.jpg' + ")"}}>
                     <div className="slider-item">
                         <div className="overlay"/>
                         <div className="container">
@@ -17,8 +19,9 @@ class HomePage extends Component {
                                         supplies
                                         it with the
                                         necessary regelialia.</p>
-                                    <p><a href="#" className="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#" className="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View
-                                            Menu</a>
+                                    <p><a href="#" className="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a
+                                        href="#" className="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">
+                                        <Link to={ROUTES.MENU}>View Menu</Link></a>
                                     </p>
                                 </div>
                                 <div className="col-md-6">
@@ -37,8 +40,8 @@ class HomePage extends Component {
                     {/*                <h1 className="mb-4">Italian Pizza</h1>*/}
                     {/*                <p className="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the*/}
                     {/*                    necessary regelialia.</p>*/}
-                    {/*                <p><a href="#" className="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="../Menu/menu.html" className="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View*/}
-                    {/*                    Menu</a></p>*/}
+                    {/*                <p><a href="#" className="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a className="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">*/}
+                    {/*                    <Link to={ROUTES.MENU}>View Menu</Link></a></p>*/}
                     {/*            </div>*/}
                     {/*            <div className="col-md-6 ftco-animate">*/}
                     {/*                <img src="../../images/bg_2.png" className="img-fluid" alt="" />*/}
@@ -136,6 +139,7 @@ class HomePage extends Component {
                     </div>
                 </section>
 
+                {/*Services*/}
                 <section className="ftco-section ftco-services">
                     <div className="overlay"/>
                     <div className="container">
@@ -425,33 +429,43 @@ class HomePage extends Component {
                             <div className="col-md-3 ftco-animate">
                                 <a href="gallery.html" className="gallery img d-flex align-items-center"
                                    style={{backgroundImage: "url(" + '../../images/gallery-1.jpg' + ")"}}>
-                                    <div className="icon mb-4 d-flex align-items-center justify-content-center">
-                                        <span className="icon-search"/>
-                                    </div>
+                                    <Link to={ROUTES.GALLERY}>
+                                        <div className="icon mb-4 d-flex align-items-center justify-content-center">
+                                            <span className="icon-search"/>
+                                        </div>
+                                    </Link>
                                 </a>
                             </div>
                             <div className="col-md-3 ftco-animate">
                                 <a href="gallery.html" className="gallery img d-flex align-items-center"
                                    style={{backgroundImage: "url(" + '../../images/gallery-2.jpg' + ")"}}>
-                                    <div className="icon mb-4 d-flex align-items-center justify-content-center">
-                                        <span className="icon-search"/>
-                                    </div>
+                                    <Link to={ROUTES.GALLERY}>
+                                        <div className="icon mb-4 d-flex align-items-center justify-content-center">
+                                            <span className="icon-search"/>
+                                        </div>
+                                    </Link>
                                 </a>
                             </div>
                             <div className="col-md-3 ftco-animate">
                                 <a href="gallery.html" className="gallery img d-flex align-items-center"
                                    style={{backgroundImage: "url(" + '../../images/gallery-3.jpg' + ")"}}>
-                                    <div className="icon mb-4 d-flex align-items-center justify-content-center">
-                                        <span className="icon-search"/>
-                                    </div>
+                                    <Link to={ROUTES.GALLERY}>
+                                        <div className="icon mb-4 d-flex align-items-center justify-content-center">
+                                            <span className="icon-search"/>
+                                        </div>
+                                    </Link>
                                 </a>
                             </div>
                             <div className="col-md-3 ftco-animate">
                                 <a href="gallery.html" className="gallery img d-flex align-items-center"
                                    style={{backgroundImage: "url(" + '../../images/gallery-4.jpg' + ")"}}>
-                                    <div className="icon mb-4 d-flex align-items-center justify-content-center">
-                                        <span className="icon-search"/>
-                                    </div>
+                                    <Link to={ROUTES.GALLERY}>
+                                        <div className="icon mb-4 d-flex align-items-center justify-content-center">
+                                            <span className="icon-search"/>
+                                        </div>
+                                    </Link>
+
+
                                 </a>
                             </div>
                         </div>
