@@ -4,6 +4,7 @@ import {
     Route,
 } from 'react-router-dom';
 import Navigation from '../Navigation/navigation';
+
 // import HomeLocal from '../HomeLocal/homelocal';
 import SignUpPage from '../SignUp/signup';
 import SignInPage from '../SignIn/signin';
@@ -15,10 +16,7 @@ import ContactPage from '../Contact/contact';
 import BlogPage from '../Blog/blog';
 import BlogSinglePage from '../Blog/blogsingle';
 import GalleryPage from '../Gallery/gallery';
-// import PasswordForgetPage from '../PasswordForget';
-// import HomePage from '../Home';
-// import AccountPage from '../Account';
-// import AdminPage from '../Admin';
+import AdminPage from '../../componentAdmin/Admin/admin';
 import * as ROUTES from '../constants/routes';
 import HomePage from "../Home";
 
@@ -59,6 +57,14 @@ class App extends Component {
                 <Route path={ROUTES.GALLERY} component={GalleryPage}/>
                 <Route path={ROUTES.SIGN_UP} component={SignUpPage}/>
                 <Route path={ROUTES.SIGN_IN} component={SignInPage}/>
+
+            </Router>
+        );
+    }
+    render() {
+        return (
+            <Router>
+                <Route path={ROUTES.AdminPage} component={AdminPage}/>
             </Router>
         );
     }

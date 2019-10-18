@@ -13,7 +13,8 @@ const Navigation = ({authUser}) => (
 
 const NavigationAuth = () => (
     <div>
-        <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" style={{margin: "0 0 -33px 0"}}>
+        <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar"
+             style={{margin: "0 0 -33px 0"}}>
             <div className="container">
                 <div className="navbar-brand"><span
                     className="flaticon-pizza-1 mr-1"/>
@@ -62,7 +63,8 @@ const NavigationAuth = () => (
 );
 
 const NavigationNonAuth = () => (
-    <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" style={{margin: "0 0 -33px 0"}}>
+    <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar"
+         style={{margin: "0 0 -33px 0"}}>
         <div className="container">
             <div className="navbar-brand"><span
                 className="flaticon-pizza-1 mr-1"/>
@@ -77,8 +79,8 @@ const NavigationNonAuth = () => (
             <div className="collapse navbar-collapse" id="ftco-nav">
                 <ul className="navbar-nav ml-auto">
                     {/*Home*/}
-                    <li className="nav-item active"><a className="nav-link">
-                        <Link to={ROUTES.HOME}>Home</Link></a></li>
+                    <li className="nav-item active"><a href={ROUTES.HOME} className="nav-link">
+                        Home</a></li>
                     {/*Menu*/}
                     <li className="nav-item"><a href="" className="nav-link">
                         <Link to={ROUTES.MENU}>Menu</Link></a></li>
@@ -86,8 +88,8 @@ const NavigationNonAuth = () => (
                     <li className="nav-item"><a href="" className="nav-link">
                         <Link to={ROUTES.SERVICES}>Services</Link></a></li>
                     {/*Blog*/}
-                    <li className="nav-item"><a href="" className="nav-link">
-                        <Link to={ROUTES.BLOG}>Blog</Link></a></li>
+                    <li className="nav-item"><a href={ROUTES.BLOG} className="nav-link">
+                        Blog</a></li>
                     {/*Blog Single*/}
                     <li className="nav-item"><a href="" className="nav-link">
                         <Link to={ROUTES.BLOGSINGLE}>Blog Single</Link></a></li>

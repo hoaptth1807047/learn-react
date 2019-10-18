@@ -10,5 +10,6 @@ export const BLOG = '/blog';
 export const BLOGSINGLE = '/blogsingle';
 export const GALLERY = '/gallery';
 export const ACCOUNT = '/account';
-export const ADMIN = '/admin';
+export const LoginADPage = '/admin';
 export const PASSWORD_FORGET = '/pw-forget';
+export const AdminPage = '/admin';
