@@ -54,6 +54,11 @@ const NavigationAuth = () => (
                         <li className="nav-item"><div className="nav-link">
                             <Link to="/gallery">Gallery</Link></div>
                         </li>
+                        {/*Cart*/}
+                        <li className="nav-item"><div className="nav-link"><a href="">
+                                <Link to="/cart"><span className="icon-shopping-cart"/></Link>
+                            </a></div>
+                        </li>
                         {/*Nút Sign Out*/}
                         <li className="nav-item"><a className="nav-link">
                             <SignOutButton/></a></li>
@@ -70,7 +75,7 @@ const NavigationNonAuth = () => (
             <div className="navbar-brand"><span
                 className="flaticon-pizza-1 mr-1"/>
                 <a href="">
-                    <Link to={ROUTES.HOME}>Cowboy <br/><small>Jack</small></Link>
+                    <Link to="/home">Cowboy <br/><small>Jack</small></Link>
                 </a>
             </div>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
@@ -103,6 +108,11 @@ const NavigationNonAuth = () => (
                     {/*Contact*/}
                     <li className="nav-item"><div className="nav-link">
                         <Link to="/contact">Contact</Link></div></li>
+                    {/*Cart*/}
+                    <li className="nav-item"><div className="nav-link"><a href="">
+                        <Link to="/cart"><span className="icon-shopping-cart"/></Link>
+                    </a></div>
+                    </li>
                     {/*Gallery*/}
                     {/*<li className="nav-item"><div className="nav-link">*/}
                     {/*    <Link to="/gallery">Gallery</Link></div></li>*/}

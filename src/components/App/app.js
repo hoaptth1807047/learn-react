@@ -15,6 +15,7 @@ import ContactPage from '../Contact/contact';
 import BlogPage from '../Blog/blog';
 import BlogSinglePage from '../Blog/blogsingle';
 import GalleryPage from '../Gallery/gallery';
+import CartPage from '../Cart/cart';
 // import PasswordForgetPage from '../PasswordForget';
 // import HomePage from '../Home';
 // import AccountPage from '../Account';
@@ -57,6 +58,7 @@ class App extends Component {
                 <Route path={ROUTES.BLOG} component={BlogPage}/>
                 <Route path={ROUTES.BLOGSINGLE} component={BlogSinglePage}/>
                 <Route path={ROUTES.GALLERY} component={GalleryPage}/>
+                <Route path={ROUTES.CART} component={CartPage}/>
                 <Route path={ROUTES.SIGN_UP} component={SignUpPage}/>
                 <Route path={ROUTES.SIGN_IN} component={SignInPage}/>
             </Router>
