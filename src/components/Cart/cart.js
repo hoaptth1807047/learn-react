@@ -93,9 +93,9 @@ class AboutPage extends Component {
                                         <td style={textDetail}>
                                             Subtotal
                                         </td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td style={textDetail}></td>
+                                        <td style={textDetail}></td>
+                                        <td style={textDetail}></td>
                                         <td style={textDetail}>$24.59</td>
                                     </tr>
                                     <tr>
