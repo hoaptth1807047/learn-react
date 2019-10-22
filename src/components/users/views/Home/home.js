@@ -1,7 +1,102 @@
-import React, {Component} from 'react';
+import React from 'react';
+import {connect} from 'react-redux'
+import {addToCart} from "./../Cart/action/addToCart";
 
-class HomePage extends Component {
+class HomePage extends React.Component {
+    handleClick = (id) => {
+        this.props.addToCart(id);
+        alert("Add item!")
+    };
+
     render() {
+        const item_pizza = this.props.items.filter(item => item.cate_id === 1);
+        const item_drink = this.props.items.filter(item => item.cate_id === 2);
+        const item_burger = this.props.items.filter(item => item.cate_id === 3);
+        const item_pasta = this.props.items.filter(item => item.cate_id === 4);
+        let listItem_pizza= item_pizza.map(item => {
+            return (
+                <div className="col-md-4 text-center">
+                    <div className="menu-wrap">
+                        <a href="#" className="menu-img img mb-4"
+                           style={{backgroundImage: "url(" + item.img + ")"}}/>
+                        <div className="text">
+                            <h3><a href="#">{item.title}</a></h3>
+                            <p>{item.desc}</p>
+                            <p className="price"><span>${item.price}</span></p>
+                            <p><a className="btn btn-white btn-outline-white"
+                                  onClick={() => {
+                                      this.handleClick(item.id)
+                                  }}>
+                                Add to cart</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            )
+        });
+        let listItem_drink= item_drink.map(item => {
+            return (
+                <div className="col-md-4 text-center">
+                    <div className="menu-wrap">
+                        <a href="#" className="menu-img img mb-4"
+                           style={{backgroundImage: "url(" + item.img + ")"}}/>
+                        <div className="text">
+                            <h3><a href="#">{item.title}</a></h3>
+                            <p>{item.desc}</p>
+                            <p className="price"><span>${item.price}</span></p>
+                            <p><a className="btn btn-white btn-outline-white"
+                                  onClick={() => {
+                                      this.handleClick(item.id)
+                                  }}>
+                                Add to cart</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            )
+        });
+        let listItem_burger= item_burger.map(item => {
+            return (
+                <div className="col-md-4 text-center">
+                    <div className="menu-wrap">
+                        <a href="#" className="menu-img img mb-4"
+                           style={{backgroundImage: "url(" + item.img + ")"}}/>
+                        <div className="text">
+                            <h3><a href="#">{item.title}</a></h3>
+                            <p>{item.desc}</p>
+                            <p className="price"><span>${item.price}</span></p>
+                            <p><a className="btn btn-white btn-outline-white"
+                                  onClick={() => {
+                                      this.handleClick(item.id)
+                                  }}>
+                                Add to cart</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            )
+        });
+        let listItem_pasta= item_pasta.map(item => {
+            return (
+                <div className="col-md-4 text-center">
+                    <div className="menu-wrap">
+                        <a href="#" className="menu-img img mb-4"
+                           style={{backgroundImage: "url(" + item.img + ")"}}/>
+                        <div className="text">
+                            <h3><a href="#">{item.title}</a></h3>
+                            <p>{item.desc}</p>
+                            <p className="price"><span>${item.price}</span></p>
+                            <p><a className="btn btn-white btn-outline-white"
+                                  onClick={() => {
+                                      this.handleClick(item.id)
+                                  }}>
+                                Add to cart</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            )
+        });
         return (
             <div>
                 <section className="home-slider owl-carousel img"
@@ -17,54 +112,17 @@ class HomePage extends Component {
                                         supplies
                                         it with the
                                         necessary regelialia.</p>
-                                    <p><a href="#" className="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#" className="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View
-                                            Menu</a>
+                                    <p><a href="#" className="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a
+                                        href="#" className="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View
+                                        Menu</a>
                                     </p>
                                 </div>
                                 <div className="col-md-6">
-                                    <img src="../../images/bg_1.png" className="img-fluid" alt=""/>
+                                    <img src="../../../../images/bg_1.png" className="img-fluid" alt=""/>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    {/*<div className="slider-item">*/}
-                    {/*    <div className="overlay" />*/}
-                    {/*    <div className="container">*/}
-                    {/*        <div className="row slider-text align-items-center" data-scrollax-parent="true">*/}
-                    {/*            <div className="col-md-6 col-sm-12 order-md-last ftco-animate">*/}
-                    {/*                <span className="subheading">Crunchy</span>*/}
-                    {/*                <h1 className="mb-4">Italian Pizza</h1>*/}
-                    {/*                <p className="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the*/}
-                    {/*                    necessary regelialia.</p>*/}
-                    {/*                <p><a href="#" className="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="../Menu/menu.html" className="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View*/}
-                    {/*                    Menu</a></p>*/}
-                    {/*            </div>*/}
-                    {/*            <div className="col-md-6 ftco-animate">*/}
-                    {/*                <img src="../../images/bg_2.png" className="img-fluid" alt="" />*/}
-                    {/*            </div>*/}
-                    {/*        </div>*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
-                    
-                    {/*<div className="slider-item" style={{backgroundImage: 'url(../../public/images/bg_3.jpg)'}}>*/}
-                    {/*    <div className="overlay" />*/}
-                    {/*    <div className="container">*/}
-                    {/*        <div className="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">*/}
-                    {/*            <div className="col-md-7 col-sm-12 text-center ftco-animate">*/}
-                    {/*                <span className="subheading">Welcome</span>*/}
-                    {/*                <h1 className="mb-4">We cooked your desired Pizza Recipe</h1>*/}
-                    {/*                <p className="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the*/}
-                    {/*                    necessary regelialia.</p>*/}
-                    {/*                <p><a href="#" className="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="../Menu/menu.html" className="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View*/}
-                    {/*                    Menu</a></p>*/}
-                    {/*            </div>*/}
-                    {/*            <div className="col-md-6 ftco-animate">*/}
-                    {/*                <img src="../../images/bg_2.png" className="img-fluid" alt="" />*/}
-                    {/*            </div>*/}
-                    {/*        </div>*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
                 </section>
 
                 {/*infor*/}
@@ -118,19 +176,23 @@ class HomePage extends Component {
                     </div>
                     <div className="one-half ftco-animate">
                         <div className="heading-section ftco-animate ">
-                            <h2 className="mb-4">Welcome to <span className="flaticon-pizza">Pizza</span> A Restaurant
+                            <h2 className="mb-4">Welcome to <span className="flaticon-pizza">Pizza</span> A
+                                Restaurant
                             </h2>
                         </div>
                         <div>
-                            <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from
+                            <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came
+                                from
                                 it would have
-                                been rewritten a thousand times and everything that was left from its origin would be
+                                been rewritten a thousand times and everything that was left from its origin would
+                                be
                                 the word "and" and
                                 the Little Blind Text should turn around and return to its own, safe country. But
                                 nothing the copy said
                                 could convince her and so it didn’t take long until a few insidious Copy Writers
                                 ambushed her, made her
-                                drunk with Longe and Parole and dragged her into their agency, where they abused her for
+                                drunk with Longe and Parole and dragged her into their agency, where they abused her
+                                for
                                 their.</p>
                         </div>
                     </div>
@@ -155,7 +217,8 @@ class HomePage extends Component {
                                     </div>
                                     <div className="media-body">
                                         <h3 className="heading">Healthy Foods</h3>
-                                        <p>Even the all-powerful Pointing has no control about the blind texts it is an
+                                        <p>Even the all-powerful Pointing has no control about the blind texts it is
+                                            an
                                             almost
                                             unorthographic.</p>
                                     </div>
@@ -168,7 +231,8 @@ class HomePage extends Component {
                                     </div>
                                     <div className="media-body">
                                         <h3 className="heading">Fastest Delivery</h3>
-                                        <p>Even the all-powerful Pointing has no control about the blind texts it is an
+                                        <p>Even the all-powerful Pointing has no control about the blind texts it is
+                                            an
                                             almost
                                             unorthographic.</p>
                                     </div>
@@ -180,7 +244,8 @@ class HomePage extends Component {
                                         <span className="flaticon-pizza-1"/></div>
                                     <div className="media-body">
                                         <h3 className="heading">Original Recipes</h3>
-                                        <p>Even the all-powerful Pointing has no control about the blind texts it is an
+                                        <p>Even the all-powerful Pointing has no control about the blind texts it is
+                                            an
                                             almost
                                             unorthographic.</p>
                                     </div>
@@ -209,7 +274,8 @@ class HomePage extends Component {
                                        style={{backgroundImage: "url(" + '../../images/pizza-1.jpg' + ")"}}/>
                                     <div className="text p-4">
                                         <h3>Italian Pizza</h3>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia
+                                            and
                                             Consonantia </p>
                                         <p className="price"><span>$2.90</span> <a href="#"
                                                                                    className="ml-2 btn btn-white btn-outline-white">Order</a>
@@ -223,7 +289,8 @@ class HomePage extends Component {
                                        style={{backgroundImage: "url(" + '../../images/pizza-2.jpg' + ")"}}/>
                                     <div className="text p-4">
                                         <h3>Greek Pizza</h3>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia
+                                            and
                                             Consonantia</p>
                                         <p className="price"><span>$2.90</span> <a href="#"
                                                                                    className="ml-2 btn btn-white btn-outline-white">Order</a>
@@ -237,7 +304,8 @@ class HomePage extends Component {
                                        style={{backgroundImage: "url(" + '../../images/pizza-3.jpg' + ")"}}/>
                                     <div className="text p-4">
                                         <h3>Caucasian Pizza</h3>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia
+                                            and
                                             Consonantia</p>
                                         <p className="price"><span>$2.90</span> <a href="#"
                                                                                    className="ml-2 btn btn-white btn-outline-white">Order</a>
@@ -252,7 +320,8 @@ class HomePage extends Component {
                                        style={{backgroundImage: "url(" + '../../images/pizza-4.jpg' + ")"}}/>
                                     <div className="text p-4">
                                         <h3>American Pizza</h3>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia
+                                            and
                                             Consonantia </p>
                                         <p className="price"><span>$2.90</span> <a href="#"
                                                                                    className="ml-2 btn btn-white btn-outline-white">Order</a>
@@ -266,7 +335,8 @@ class HomePage extends Component {
                                        style={{backgroundImage: "url(" + '../../images/pizza-5.jpg' + ")"}}/>
                                     <div className="text p-4">
                                         <h3>Tomatoe Pie</h3>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia
+                                            and
                                             Consonantia</p>
                                         <p className="price"><span>$2.90</span>
                                             <a href="#" className="ml-2 btn btn-white btn-outline-white">Order</a>
@@ -280,7 +350,8 @@ class HomePage extends Component {
                                        style={{backgroundImage: "url(" + '../../images/pizza-6.jpg' + ")"}}/>
                                     <div className="text p-4">
                                         <h3>Margherita</h3>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and
+                                        <p>Far far away, behind the word mountains, far from the countries Vokalia
+                                            and
                                             Consonantia</p>
                                         <p className="price"><span>$2.90</span>
                                             <a href="#" className="ml-2 btn btn-white btn-outline-white">Order</a>
@@ -545,207 +616,32 @@ class HomePage extends Component {
 
                                         <div className="tab-content ftco-animate" id="v-pills-tabContent">
 
-                                            <div className="tab-pane fade show active" id="v-pills-1" role="tabpanel"
+                                            <div className="tab-pane fade show active" id="v-pills-1"
+                                                 role="tabpanel"
                                                  aria-labelledby="v-pills-1-tab">
                                                 <div className="row">
-                                                    <div className="col-md-4 text-center">
-                                                        <div className="menu-wrap">
-                                                            <a href="#" className="menu-img img mb-4"
-                                                               style={{backgroundImage: "url(" + 'images/pizza-1.jpg' + ")"}}/>
-                                                            <div className="text">
-                                                                <h3><a href="#">Itallian Pizza</a></h3>
-                                                                <p>Far far away, behind the word mountains, far from the
-                                                                    countries Vokalia and Consonantia.</p>
-                                                                <p className="price"><span>$2.90</span></p>
-                                                                <p><a href="#"
-                                                                      className="btn btn-white btn-outline-white">Add to
-                                                                    cart</a></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-md-4 text-center">
-                                                        <div className="menu-wrap">
-                                                            <a href="#" className="menu-img img mb-4"
-                                                               style={{backgroundImage: "url(" + 'images/pizza-2.jpg' + ")"}}/>
-                                                            <div className="text">
-                                                                <h3><a href="#">Itallian Pizza</a></h3>
-                                                                <p>Far far away, behind the word mountains, far from the
-                                                                    countries Vokalia and Consonantia.</p>
-                                                                <p className="price"><span>$2.90</span></p>
-                                                                <p><a href="#"
-                                                                      className="btn btn-white btn-outline-white">Add to
-                                                                    cart</a></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-md-4 text-center">
-                                                        <div className="menu-wrap">
-                                                            <a href="#" className="menu-img img mb-4"
-                                                               style={{backgroundImage: "url(" + 'images/pizza-3.jpg' + ")"}}/>
-                                                            <div className="text">
-                                                                <h3><a href="#">Itallian Pizza</a></h3>
-                                                                <p>Far far away, behind the word mountains, far from the
-                                                                    countries Vokalia and Consonantia.</p>
-                                                                <p className="price"><span>$2.90</span></p>
-                                                                <p><a href="#"
-                                                                      className="btn btn-white btn-outline-white">Add to
-                                                                    cart</a></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    {listItem_pizza}
                                                 </div>
                                             </div>
 
                                             <div className="tab-pane fade" id="v-pills-2" role="tabpanel"
                                                  aria-labelledby="v-pills-2-tab">
                                                 <div className="row">
-                                                    <div className="col-md-4 text-center">
-                                                        <div className="menu-wrap">
-                                                            <a href="#" className="menu-img img mb-4"
-                                                               style={{backgroundImage: "url(" + 'images/drink-1.jpg' + ")"}}/>
-                                                            <div className="text">
-                                                                <h3><a href="#">Lemonade Juice</a></h3>
-                                                                <p>Far far away, behind the word mountains, far from the
-                                                                    countries Vokalia and Consonantia.</p>
-                                                                <p className="price"><span>$2.90</span></p>
-                                                                <p><a href="#"
-                                                                      className="btn btn-white btn-outline-white">Add to
-                                                                    cart</a></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-md-4 text-center">
-                                                        <div className="menu-wrap">
-                                                            <a href="#" className="menu-img img mb-4"
-                                                               style={{backgroundImage: "url(" + 'images/drink-2.jpg' + ")"}}/>
-                                                            <div className="text">
-                                                                <h3><a href="#">Pineapple Juice</a></h3>
-                                                                <p>Far far away, behind the word mountains, far from the
-                                                                    countries Vokalia and Consonantia.</p>
-                                                                <p className="price"><span>$2.90</span></p>
-                                                                <p><a href="#"
-                                                                      className="btn btn-white btn-outline-white">Add to
-                                                                    cart</a></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-md-4 text-center">
-                                                        <div className="menu-wrap">
-                                                            <a href="#" className="menu-img img mb-4"
-                                                               style={{backgroundImage: "url(" + 'images/drink-3.jpg' + ")"}}/>
-                                                            <div className="text">
-                                                                <h3><a href="#">Soda Drinks</a></h3>
-                                                                <p>Far far away, behind the word mountains, far from the
-                                                                    countries Vokalia and Consonantia.</p>
-                                                                <p className="price"><span>$2.90</span></p>
-                                                                <p><a href="#"
-                                                                      className="btn btn-white btn-outline-white">Add to
-                                                                    cart</a></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    {listItem_drink}
                                                 </div>
                                             </div>
 
                                             <div className="tab-pane fade" id="v-pills-3" role="tabpanel"
                                                  aria-labelledby="v-pills-3-tab">
                                                 <div className="row">
-                                                    <div className="col-md-4 text-center">
-                                                        <div className="menu-wrap">
-                                                            <a href="#" className="menu-img img mb-4"
-                                                               style={{backgroundImage: "url(" + 'images/burger-1.jpg' + ")"}}/>
-                                                            <div className="text">
-                                                                <h3><a href="#">Itallian Pizza</a></h3>
-                                                                <p>Far far away, behind the word mountains, far from the
-                                                                    countries Vokalia and Consonantia.</p>
-                                                                <p className="price"><span>$2.90</span></p>
-                                                                <p><a href="#"
-                                                                      className="btn btn-white btn-outline-white">Add to
-                                                                    cart</a></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-md-4 text-center">
-                                                        <div className="menu-wrap">
-                                                            <a href="#" className="menu-img img mb-4"
-                                                               style={{backgroundImage: "url(" + 'images/burger-2.jpg' + ")"}}/>
-                                                            <div className="text">
-                                                                <h3><a href="#">Itallian Pizza</a></h3>
-                                                                <p>Far far away, behind the word mountains, far from the
-                                                                    countries Vokalia and Consonantia.</p>
-                                                                <p className="price"><span>$2.90</span></p>
-                                                                <p><a href="#"
-                                                                      className="btn btn-white btn-outline-white">Add to
-                                                                    cart</a></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-md-4 text-center">
-                                                        <div className="menu-wrap">
-                                                            <a href="#" className="menu-img img mb-4"
-                                                               style={{backgroundImage: "url(" + 'images/burger-3.jpg' + ")"}}/>
-                                                            <div className="text">
-                                                                <h3><a href="#">Itallian Pizza</a></h3>
-                                                                <p>Far far away, behind the word mountains, far from the
-                                                                    countries Vokalia and Consonantia.</p>
-                                                                <p className="price"><span>$2.90</span></p>
-                                                                <p><a href="#"
-                                                                      className="btn btn-white btn-outline-white">Add to
-                                                                    cart</a></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    {listItem_burger}
                                                 </div>
                                             </div>
 
                                             <div className="tab-pane fade" id="v-pills-4" role="tabpanel"
                                                  aria-labelledby="v-pills-4-tab">
                                                 <div className="row">
-                                                    <div className="col-md-4 text-center">
-                                                        <div className="menu-wrap">
-                                                            <a href="#" className="menu-img img mb-4"
-                                                               style={{backgroundImage: "url(" + 'images/pasta-1.jpg' + ")"}}/>
-                                                            <div className="text">
-                                                                <h3><a href="#">Itallian Pizza</a></h3>
-                                                                <p>Far far away, behind the word mountains, far from the
-                                                                    countries Vokalia and Consonantia.</p>
-                                                                <p className="price"><span>$2.90</span></p>
-                                                                <p><a href="#"
-                                                                      className="btn btn-white btn-outline-white">Add to
-                                                                    cart</a></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-md-4 text-center">
-                                                        <div className="menu-wrap">
-                                                            <a href="#" className="menu-img img mb-4"
-                                                               style={{backgroundImage: "url(" + 'images/pasta-2.jpg' + ")"}}/>
-                                                            <div className="text">
-                                                                <h3><a href="#">Itallian Pizza</a></h3>
-                                                                <p>Far far away, behind the word mountains, far from the
-                                                                    countries Vokalia and Consonantia.</p>
-                                                                <p className="price"><span>$2.90</span></p>
-                                                                <p><a href="#"
-                                                                      className="btn btn-white btn-outline-white">Add to
-                                                                    cart</a></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-md-4 text-center">
-                                                        <div className="menu-wrap">
-                                                            <a href="#" className="menu-img img mb-4"
-                                                               style={{backgroundImage: "url(" + 'images/pasta-3.jpg' + ")"}}/>
-                                                            <div className="text">
-                                                                <h3><a href="#">Itallian Pizza</a></h3>
-                                                                <p>Far far away, behind the word mountains, far from the
-                                                                    countries Vokalia and Consonantia.</p>
-                                                                <p className="price"><span>$2.90</span></p>
-                                                                <p><a href="#"
-                                                                      className="btn btn-white btn-outline-white">Add to
-                                                                    cart</a></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    {listItem_pasta}
                                                 </div>
                                             </div>
                                         </div>
@@ -776,7 +672,8 @@ class HomePage extends Component {
                                         <div className="meta">
                                             <div><a href="#">Sept 10, 2018</a></div>
                                             <div><a href="#">Admin</a></div>
-                                            <div><a href="#" className="meta-chat"><span className="icon-chat"/> 3</a>
+                                            <div><a href="#" className="meta-chat"><span
+                                                className="icon-chat"/> 3</a>
                                             </div>
                                         </div>
                                         <h3 className="heading mt-2"><a href="#">The Delicious Pizza</a></h3>
@@ -794,7 +691,8 @@ class HomePage extends Component {
                                         <div className="meta">
                                             <div><a href="#">Sept 10, 2018</a></div>
                                             <div><a href="#">Admin</a></div>
-                                            <div><a href="#" className="meta-chat"><span className="icon-chat"/> 3</a>
+                                            <div><a href="#" className="meta-chat"><span
+                                                className="icon-chat"/> 3</a>
                                             </div>
                                         </div>
                                         <h3 className="heading mt-2"><a href="#">The Delicious Pizza</a></h3>
@@ -812,7 +710,8 @@ class HomePage extends Component {
                                         <div className="meta">
                                             <div><a href="#">Sept 10, 2018</a></div>
                                             <div><a href="#">Admin</a></div>
-                                            <div><a href="#" className="meta-chat"><span className="icon-chat"/> 3</a>
+                                            <div><a href="#" className="meta-chat"><span
+                                                className="icon-chat"/> 3</a>
                                             </div>
                                         </div>
                                         <h3 className="heading mt-2"><a href="#">The Delicious Pizza</a></h3>
@@ -870,9 +769,11 @@ class HomePage extends Component {
                                     <p>Far far away, behind the word mountains, far from the countries Vokalia and
                                         Consonantia, there live the blind texts.</p>
                                     <ul className="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                                        <li className="ftco-animate"><a href="#"><span className="icon-twitter"/></a>
+                                        <li className="ftco-animate"><a href="#"><span
+                                            className="icon-twitter"/></a>
                                         </li>
-                                        <li className="ftco-animate"><a href="#"><span className="icon-facebook"/></a>
+                                        <li className="ftco-animate"><a href="#"><span
+                                            className="icon-facebook"/></a>
                                         </li>
                                         <li className="ftco-animate"><a href="#"><span
                                             className="icon-instagram"/></a></li>
@@ -887,7 +788,8 @@ class HomePage extends Component {
                                            style={{backgroundImage: "url(" + 'images/image_1.jpg' + ")"}}>
                                         </a>
                                         <div className="text">
-                                            <h3 className="heading"><a href="#">Even the all-powerful Pointing has no
+                                            <h3 className="heading"><a href="#">Even the all-powerful Pointing has
+                                                no
                                                 control about</a></h3>
                                             <div className="meta">
                                                 <div><a href="#"><span className="icon-calendar"/> Sept 15,
@@ -901,7 +803,8 @@ class HomePage extends Component {
                                         <a className="blog-img mr-4"
                                            style={{backgroundImage: "url(" + 'images/image_2.jpg' + ")"}}/>
                                         <div className="text">
-                                            <h3 className="heading"><a href="#">Even the all-powerful Pointing has no
+                                            <h3 className="heading"><a href="#">Even the all-powerful Pointing has
+                                                no
                                                 control about</a></h3>
                                             <div className="meta">
                                                 <div><a href="#"><span className="icon-calendar"/> Sept 15,
@@ -959,4 +862,18 @@ class HomePage extends Component {
     }
 }
 
-export default HomePage
+const mapStateToProps = (state) => {
+    return {
+        items: state.items
+    }
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addToCart: (id) => {
+            dispatch(addToCart(id))
+        }
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomePage)
