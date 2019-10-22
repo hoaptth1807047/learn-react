@@ -1,12 +1,13 @@
 export const LANDING = '/';
-export const SIGN_UP = '/signup';
-export const SIGN_IN = '/signin';
+export const SIGN_UP = '/sign-up';
+export const SIGN_IN = '/sign-in';
 export const HOME = '/home';
 export const MENU = '/menu';
 export const SERVICES = '/services';
 export const ABOUT = '/about';
 export const CONTACT = '/contact';
 export const BLOG = '/blog';
+export const CART = '/cart';
 export const ACCOUNT = '/account';
 export const ADMIN = '/admin';
 export const PASSWORD_FORGET = '/pw-forget';
