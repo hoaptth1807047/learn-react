@@ -65,7 +65,7 @@ class ContactPage extends Component {
                                         <textarea name id cols={30} rows={7} className="form-control" placeholder="Message" defaultValue={""} />
                                     </div>
                                     <div className="form-group">
-                                        <input type="submit" defaultValue="Send Message" className="btn btn-primary py-3 px-5" />
+                                        <input type="submit" defaultValue="Send Message" value="Contact" className="btn btn-primary py-3 px-5" />
                                     </div>
                                 </form>
                             </div>
