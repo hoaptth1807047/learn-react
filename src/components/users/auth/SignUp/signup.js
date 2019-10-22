@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import {compose} from 'recompose';
 
-import {withFirebase} from '../Firebase';
-import * as ROUTES from '../constants/routes';
-import '../../../src/css/signup.css'
+import {withFirebase} from '../../../Firebase';
+import * as ROUTES from '../../../constants/routes';
+import '../../../../css/signup.css'
 
 const SignUpPage = () => (
     <div>
@@ -17,6 +17,8 @@ const INITIAL_STATE = {
     email: '',
     passwordOne: '',
     passwordTwo: '',
+    address: '',
+    phone: '',
     error: null,
 };
 
@@ -58,6 +60,8 @@ class SignUpFormBase extends Component {
             email,
             passwordOne,
             passwordTwo,
+            address,
+            phone,
             error,
         } = this.state;
         const isInvalid =
@@ -85,8 +89,8 @@ class SignUpFormBase extends Component {
                                         name="email"
                                         value={email}
                                         onChange={this.onChange}
-                                        type="text"
-                                        placeholder="Email Address"
+                                        type="email"
+                                        placeholder="Email"
                                     />
                                     <input
                                         name="passwordOne"
@@ -101,6 +105,20 @@ class SignUpFormBase extends Component {
                                         onChange={this.onChange}
                                         type="password"
                                         placeholder="Confirm Password"
+                                    />
+                                    <input
+                                        name="address"
+                                        value={address}
+                                        onChange={this.onChange}
+                                        type="text"
+                                        placeholder="Address"
+                                    />
+                                    <input
+                                        name="phone"
+                                        value={phone}
+                                        onChange={this.onChange}
+                                        type="text"
+                                        placeholder="Phone Number"
                                     />
                                     <button disabled={isInvalid} type="submit">Sign Up</button>
                                     {error && <p>{error.message}</p>}

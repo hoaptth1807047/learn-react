@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import * as ROUTES from "../constants/routes";
+import * as ROUTES from "../../../constants/routes";
 import {Link} from "react-router-dom";
 
 class BlogSinglePage extends Component {
@@ -31,7 +31,7 @@ class BlogSinglePage extends Component {
                                     enim praesentium omnis, iste doloremque quia officia optio deserunt molestiae voluptates soluta
                                     architecto tempora.</p>
                                 <p>
-                                    <img src="../../images/image_1.jpg" alt="" className="img-fluid" />
+                                    <img src="../../../../images/image_1.jpg" alt="" className="img-fluid" />
                                 </p>
                                 <p>Molestiae cupiditate inventore animi, maxime sapiente optio, illo est nemo veritatis repellat sunt
                                     doloribus nesciunt! Minima laborum magni reiciendis qui voluptate quisquam voluptatem soluta illo
@@ -43,7 +43,7 @@ class BlogSinglePage extends Component {
                                     dolore voluptas, omnis molestias odio dignissimos culpa ex earum nisi consequatur quos odit quasi
                                     repellat qui officiis reiciendis incidunt hic non? Debitis commodi aut, adipisci.</p>
                                 <p>
-                                    <img src="../../images/image_2.jpg" alt="" className="img-fluid" />
+                                    <img src="../../../../images/image_2.jpg" alt="" className="img-fluid" />
                                 </p>
                                 <p>Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil explicabo quod,
                                     est eos ipsum. Unde aut non tenetur tempore, nisi culpa voluptate maiores officiis quis vel ab
@@ -73,7 +73,7 @@ class BlogSinglePage extends Component {
                                 </div>
                                 <div className="about-author d-flex">
                                     <div className="bio align-self-md-center mr-5">
-                                        <img src="../../images/person_4.jpg" alt="Image placeholder" className="img-fluid mb-4" />
+                                        <img src="../../../../images/person_4.jpg" alt="Image placeholder" className="img-fluid mb-4" />
                                     </div>
                                     <div className="desc align-self-md-center">
                                         <h3>Lance Smith</h3>
@@ -87,7 +87,7 @@ class BlogSinglePage extends Component {
                                     <ul className="comment-list">
                                         <li className="comment">
                                             <div className="vcard bio">
-                                                <img src="../../images/person_1.jpg" alt="Image placeholder" />
+                                                <img src="../../../../images/person_1.jpg" alt="Image placeholder" />
                                             </div>
                                             <div className="comment-body">
                                                 <h3>John Doe</h3>
@@ -100,7 +100,7 @@ class BlogSinglePage extends Component {
                                         </li>
                                         <li className="comment">
                                             <div className="vcard bio">
-                                                <img src="../../images/person_1.jpg" alt="Image placeholder" />
+                                                <img src="../../../../images/person_1.jpg" alt="Image placeholder" />
                                             </div>
                                             <div className="comment-body">
                                                 <h3>John Doe</h3>
@@ -113,7 +113,7 @@ class BlogSinglePage extends Component {
                                             <ul className="children">
                                                 <li className="comment">
                                                     <div className="vcard bio">
-                                                        <img src="../../images/person_1.jpg" alt="Image placeholder" />
+                                                        <img src="../../../../images/person_1.jpg" alt="Image placeholder" />
                                                     </div>
                                                     <div className="comment-body">
                                                         <h3>John Doe</h3>
@@ -127,7 +127,7 @@ class BlogSinglePage extends Component {
                                                     <ul className="children">
                                                         <li className="comment">
                                                             <div className="vcard bio">
-                                                                <img src="../../images/person_1.jpg" alt="Image placeholder" />
+                                                                <img src="../../../../images/person_1.jpg" alt="Image placeholder" />
                                                             </div>
                                                             <div className="comment-body">
                                                                 <h3>John Doe</h3>
@@ -141,7 +141,7 @@ class BlogSinglePage extends Component {
                                                             <ul className="children">
                                                                 <li className="comment">
                                                                     <div className="vcard bio">
-                                                                        <img src="../../images/person_1.jpg" alt="Image placeholder" />
+                                                                        <img src="../../../../images/person_1.jpg" alt="Image placeholder" />
                                                                     </div>
                                                                     <div className="comment-body">
                                                                         <h3>John Doe</h3>
@@ -161,7 +161,7 @@ class BlogSinglePage extends Component {
                                         </li>
                                         <li className="comment">
                                             <div className="vcard bio">
-                                                <img src="../../images/person_1.jpg" alt="Image placeholder" />
+                                                <img src="../../../../images/person_1.jpg" alt="Image placeholder" />
                                             </div>
                                             <div className="comment-body">
                                                 <h3>John Doe</h3>
