@@ -112,7 +112,7 @@ class HomePage extends React.Component {
                                         supplies
                                         it with the
                                         necessary regelialia.</p>
-                                    <p><a href="#" className="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a
+                                    <p><a href="#" className="btn btn-primary p-3 px-xl-4 py-xl-3" style={{backgroundColor: "#fac564"}}>Order Now</a> <a
                                         href="#" className="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">
                                         <Link to="/menu">View Menu</Link></a>
                                     </p>

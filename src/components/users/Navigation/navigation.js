@@ -1,8 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import SignOutButton from '../../users/auth/SignOut/singout';
-import * as ROUTES from '../../constants/routes';
+import SignOutButton from '../auth/SignOut/singout';
 
 const Navigation = ({authUser}) => (
     <div>
@@ -13,58 +12,45 @@ const Navigation = ({authUser}) => (
 
 const NavigationAuth = () => (
     <div>
-        <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" style={{margin: "0 0 -33px 0"}}>
+        <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
             <div className="container">
-                <div className="navbar-brand"><span
+                <div className="navbar-brand" href="/home"><span
                     className="flaticon-pizza-1 mr-1"/>
-                    <a href="">
-                        <Link to={ROUTES.HOME}>Cowboy <br/><small>Jack</small></Link>
-                    </a>
+                    Cowboy <br/><small>Jack</small>
                 </div>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                         aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="oi oi-menu"/><Link to={ROUTES.MENU}>Menu</Link>
+                    <span className="oi oi-menu"/> Menu
                 </button>
                 <div className="collapse navbar-collapse" id="ftco-nav">
                     <ul className="navbar-nav ml-auto">
-                        {/*Home*/}
-                        {/*<li className="nav-item active"><a href={ROUTES.HOME} className="nav-link">*/}
-                        {/*    Home</a></li>*/}
                         <li className="nav-item active"><div className="nav-link">
-                            <Link to="/home">Home</Link></div></li>
-                        {/*Menu*/}
-                        <li className="nav-item"><div className="nav-link">
-                            <Link to="/menu">Menu</Link></div></li>
-                        {/*Promotion*/}
-                        <li className="nav-item"><div className="nav-link">
-                            <Link to="/promotion">Promotion</Link></div></li>
-                        {/*Services*/}
-                        <li className="nav-item"><div className="nav-link">
-                            <Link to="/services">Services</Link></div></li>
-                        {/*Blog*/}
-                        <li className="nav-item"><div className="nav-link">
-                            <Link to="/blog">Blog</Link></div></li>
-                        {/*Blog Single*/}
-                        {/*<li className="nav-item"><div className="nav-link">*/}
-                        {/*    <Link to="/blogsingle">Blog Single</Link></div></li>*/}
-                        {/*About*/}
-                        <li className="nav-item"><div className="nav-link">
-                            <Link to="/about">About</Link></div></li>
-                        {/*Contact*/}
-                        {/*<li className="nav-item"><div className="nav-link">*/}
-                        {/*    <Link to="/contact">Contact</Link></div></li>*/}
-                        {/*Gallery*/}
-                        <li className="nav-item"><div className="nav-link">
-                            <Link to="/gallery">Gallery</Link></div>
+                            <Link to="/home">Home</Link></div>
                         </li>
-                        {/*Cart*/}
-                        <li className="nav-item"><div className="nav-link"><a href="">
-                            <Link to="/cart"><span className="icon-shopping-cart"/></Link>
-                        </a></div>
+                        <li className="nav-item"><div className="nav-link">
+                            <Link to="/menu">Menu</Link></div>
                         </li>
-                        {/*Nút Sign Out*/}
-                        <li className="nav-item"><a className="nav-link">
-                            <SignOutButton/></a></li>
+                        <li className="nav-item"><div className="nav-link">
+                            <Link to="/promotion">Promotion</Link></div>
+                        </li>
+                        <li className="nav-item"><div className="nav-link">
+                            <Link to="/services">Services</Link></div>
+                        </li>
+                        <li className="nav-item"><div className="nav-link">
+                            <Link to="/blog">Blog</Link>
+                        </div>
+                        </li>
+                        <li className="nav-item"><div className="nav-link">
+                            <Link to="/about">About</Link></div>
+                        </li>
+                        <li className="nav-item"><div className="nav-link">
+                            <Link to="/contact">Contact</Link></div>
+                        </li>
+                        <li className="nav-item"><div className="nav-link">
+                            <Link to="/cart"><i className="icon-shopping_cart"/></Link></div>
+                        </li>
+                        <li className="nav-item"><div className="nav-link">
+                            <SignOutButton/></div></li>
                     </ul>
                 </div>
             </div>
@@ -73,67 +59,51 @@ const NavigationAuth = () => (
 );
 
 const NavigationNonAuth = () => (
-    <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" style={{margin: "0 0 -33px 0"}}>
-        <div className="container">
-            <div className="navbar-brand"><span
-                className="flaticon-pizza-1 mr-1"/>
-                <a href="">
-                    <Link to="/home">Cowboy <br/><small>Jack</small></Link>
-                </a>
+    <div>
+        <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+            <div className="container">
+                <div className="navbar-brand"><span
+                    className="flaticon-pizza-1 mr-1"/>
+                    Cowboy <br/><small>Jack</small>
+                </div>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="oi oi-menu"/> Menu
+                </button>
+                <div className="collapse navbar-collapse" id="ftco-nav">
+                    <ul className="navbar-nav ml-auto">
+                        <li className="nav-item active"><div className="nav-link">
+                            <Link to="/home">Home</Link></div>
+                        </li>
+                        <li className="nav-item"><div className="nav-link">
+                            <Link to="/menu">Menu</Link></div>
+                        </li>
+                        <li className="nav-item"><div className="nav-link">
+                            <Link to="/promotion">Promotion</Link></div>
+                        </li>
+                        <li className="nav-item"><div className="nav-link">
+                            <Link to="/services">Services</Link></div>
+                        </li>
+                        <li className="nav-item"><div className="nav-link">
+                            <Link to="/blog">Blog</Link>
+                        </div>
+                        </li>
+                        <li className="nav-item"><div className="nav-link">
+                            <Link to="/about">About</Link></div>
+                        </li>
+                        <li className="nav-item"><div className="nav-link">
+                            <Link to="/contact">Contact</Link></div>
+                        </li>
+                        <li className="nav-item"><div className="nav-link">
+                            <Link to="/cart"><i className="icon-shopping_cart"/></Link></div>
+                        </li>
+                        <li className="nav-item"><div className="nav-link">
+                            <Link to="/sign-in">Sign In</Link></div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-                    aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="oi oi-menu"/><Link to={ROUTES.MENU}>Menu</Link>
-            </button>
-            <div className="collapse navbar-collapse" id="ftco-nav">
-                <ul className="navbar-nav ml-auto">
-                    {/*Home*/}
-                    {/*<li className="nav-item active"><a href={ROUTES.HOME} className="nav-link">*/}
-                    {/*    Home</a></li>*/}
-                    <li className="nav-item active"><div className="nav-link">
-                        <Link to="/home">Home</Link></div></li>
-                    {/*Menu*/}
-                    <li className="nav-item"><div className="nav-link">
-                        <Link to="/menu">Menu</Link></div></li>
-                    {/*Promotion*/}
-                    <li className="nav-item"><div className="nav-link">
-                        <Link to="/promotion">Promotion</Link></div></li>
-                    {/*Services*/}
-                    <li className="nav-item"><div className="nav-link">
-                        <Link to="/services">Services</Link></div></li>
-                    {/*Blog*/}
-                    <li className="nav-item"><div className="nav-link">
-                        <Link to="/blog">Blog</Link></div>
-                    </li>
-                    {/*Blog Single*/}
-                    {/*<li className="nav-item"><div className="nav-link">*/}
-                    {/*    <Link to="/blogsingle">Blog Single</Link></div></li>*/}
-                    {/*About*/}
-                    <li className="nav-item"><div className="nav-link">
-                        <Link to="/about">About</Link></div></li>
-                    {/*Contact*/}
-                    <li className="nav-item"><div className="nav-link">
-                        <Link to="/contact">Contact</Link></div></li>
-                    {/*Cart*/}
-                    <li className="nav-item"><div className="nav-link"><a href="">
-                        <Link to="/cart"><span className="icon-shopping-cart"/></Link>
-                    </a></div>
-                    </li>
-                    {/*Gallery*/}
-                    {/*<li className="nav-item"><div className="nav-link">*/}
-                    {/*    <Link to="/gallery">Gallery</Link></div></li>*/}
-                    {/*Sign In*/}
-                    <li className="nav-item"><div className="nav-link">
-                        <Link to="/signin">Sign In</Link></div>
-                    </li>
-                    {/*Sign Up*/}
-                    <li className="nav-item"><div className="nav-link">
-                        <Link to="/signup">Sign Up</Link></div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
 );
-
 export default Navigation;

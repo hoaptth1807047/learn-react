@@ -51,18 +51,19 @@ class App extends Component {
                     <Navigation authUser={this.state.authUser}/>
                     <hr/>
                 </div>
-                <Route exact path={ROUTES.HOME} component={HomePage}/>
-                <Route path={ROUTES.MENU} component={MenuPage}/>
-                <Route path={ROUTES.PROMOTION} component={PromotionPage}/>
-                <Route path={ROUTES.SERVICES} component={ServicesPage}/>
-                <Route path={ROUTES.ABOUT} component={AboutPage}/>
-                <Route path={ROUTES.CONTACT} component={ContactPage}/>
-                <Route path={ROUTES.BLOG} component={BlogPage}/>
-                <Route path={ROUTES.BLOGSINGLE} component={BlogSinglePage}/>
-                <Route path={ROUTES.GALLERY} component={GalleryPage}/>
-                <Route path={ROUTES.CART} component={CartPage}/>
-                <Route path={ROUTES.SIGN_UP} component={SignUpPage}/>
-                <Route path={ROUTES.SIGN_IN} component={SignInPage}/>
+                <div>
+                    <Route path="/home" component={HomePage}/>
+                    <Route path="/menu" component={MenuPage}/>
+                    <Route path="/promotion" component={PromotionPage}/>
+                    <Route path="/services" component={ServicesPage}/>
+                    <Route path="/about" component={AboutPage}/>
+                    <Route path="/contact" component={ContactPage}/>
+                    <Route path="/blog" component={BlogPage}/>
+                    <Route path="/sign-up" component={SignUpPage}/>
+                    <Route path="/sign-in" component={SignInPage}/>
+                    <Route path="/cart" component={Cart}/>
+                    <Route path="/pw-forget" component={PasswordForgetPage}/>
+                </div>
             </Router>
         );
     }
