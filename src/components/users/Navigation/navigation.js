@@ -31,6 +31,9 @@ const NavigationAuth = () => (
                             <Link to="/menu">Menu</Link></div>
                         </li>
                         <li className="nav-item"><div className="nav-link">
+                            <Link to="/promotion">Promotion</Link></div>
+                        </li>
+                        <li className="nav-item"><div className="nav-link">
                             <Link to="/services">Services</Link></div>
                         </li>
                         <li className="nav-item"><div className="nav-link">
@@ -74,6 +77,9 @@ const NavigationNonAuth = () => (
                         </li>
                         <li className="nav-item"><div className="nav-link">
                             <Link to="/menu">Menu</Link></div>
+                        </li>
+                        <li className="nav-item"><div className="nav-link">
+                            <Link to="/promotion">Promotion</Link></div>
                         </li>
                         <li className="nav-item"><div className="nav-link">
                             <Link to="/services">Services</Link></div>
