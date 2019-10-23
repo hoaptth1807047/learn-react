@@ -4,6 +4,7 @@ import {withFirebase} from '../Firebase';
 import Navigation from '../users/Navigation/navigation';
 import HomePage from "../users/views/Home/home";
 import MenuPage from '../users/views/Menu/menu';
+import PromotionPage from '../users/views/Promotion/promotion';
 import ServicesPage from '../users/views/Services/services';
 import AboutPage from '../users/views/About/about';
 import ContactPage from '../users/views/Contact/contact';
@@ -45,6 +46,7 @@ class App extends Component {
                 <div>
                     <Route path="/home" component={HomePage}/>
                     <Route path="/menu" component={MenuPage}/>
+                    <Route path="/promotion" component={PromotionPage}/>
                     <Route path="/services" component={ServicesPage}/>
                     <Route path="/about" component={AboutPage}/>
                     <Route path="/contact" component={ContactPage}/>

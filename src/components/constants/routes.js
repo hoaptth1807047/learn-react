@@ -3,6 +3,7 @@ export const SIGN_UP = '/sign-up';
 export const SIGN_IN = '/sign-in';
 export const HOME = '/home';
 export const MENU = '/menu';
+export const PROMOTION = '/promotion';
 export const SERVICES = '/services';
 export const ABOUT = '/about';
 export const CONTACT = '/contact';
