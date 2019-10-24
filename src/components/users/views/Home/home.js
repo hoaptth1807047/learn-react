@@ -20,8 +20,8 @@ class HomePage extends React.Component {
                         <a href="#" className="menu-img img mb-4"
                            style={{backgroundImage: "url(" + item.img + ")"}}/>
                         <div className="text">
-                            <h3><a href="#">{item.title}</a></h3>
                             <p>{item.desc}</p>
+                            <h3><a href="#">{item.title}</a></h3>
                             <p className="price"><span>${item.price}</span></p>
                             <p><a className="btn btn-white btn-outline-white"
                                   onClick={() => {
@@ -112,7 +112,7 @@ class HomePage extends React.Component {
                                         supplies
                                         it with the
                                         necessary regelialia.</p>
-                                    <p><a href="#" className="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a
+                                    <p><a href="#" className="btn btn-primary p-3 px-xl-4 py-xl-3" style={{background: "#fac564"}}>Order Now</a> <a
                                         href="#" className="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">
                                         <Link to="/menu">View Menu</Link></a>
                                     </p>
@@ -447,8 +447,12 @@ class HomePage extends React.Component {
 
                             <div className="col-lg-4 d-flex ftco-animate">
                                 <div className="services-wrap d-flex">
-                                    <a href="#" className="img"
-                                       style={{backgroundImage: "url(" + '../../images/pizza-2.jpg' + ")"}}/>
+                                    <a href="#" className="gallery img d-flex align-items-center"
+                                       style={{backgroundImage: "url(" + '../../images/pizza-2.jpg' + ")", height: 'auto'}}>
+                                        <div className="icon mb-4 d-flex align-items-center justify-content-center">
+                                            <span className="icon-search"/>
+                                        </div>
+                                    </a>
                                     <div className="text p-4">
                                         <h3>Greek Pizza</h3>
                                         <p>Far far away, behind the word mountains, far from the countries Vokalia
