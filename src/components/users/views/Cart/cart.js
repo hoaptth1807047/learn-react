@@ -41,7 +41,7 @@ class Cart extends Component {
                             </td>
                             <td style={textDetail}>
                                 <input type="submit" defaultValue="Send Message" value="Remove"
-                                       className="btn btn-primary py-3" style={removeProduct}
+                                       className="btn-remove-cart btn-primary py-3" style={removeProduct}
                                        onClick={() => {
                                            this.handleRemove(item.id)
                                        }}/>

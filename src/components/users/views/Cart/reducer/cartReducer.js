@@ -1,9 +1,20 @@
 import pizza_1 from "../../../../../images/pizza-1.jpg"
 import pizza_2 from "../../../../../images/pizza-2.jpg"
 import pizza_3 from "../../../../../images/pizza-3.jpg"
+import pizza_4 from "../../../../../images/pizza-4.jpg"
+import pizza_5 from "../../../../../images/pizza-5.jpg"
+import pizza_6 from "../../../../../images/pizza-6.jpg"
+import pizza_7 from "../../../../../images/pizza-7.jpg"
+import pizza_8 from "../../../../../images/pizza-8.jpg"
 import drink_1 from "../../../../../images/drink-1.jpg"
 import drink_2 from "../../../../../images/drink-2.jpg"
 import drink_3 from "../../../../../images/drink-3.jpg"
+import drink_4 from "../../../../../images/drink-4.jpg"
+import drink_5 from "../../../../../images/drink-5.jpg"
+import drink_6 from "../../../../../images/drink-6.jpg"
+import drink_7 from "../../../../../images/drink-7.jpg"
+import drink_8 from "../../../../../images/drink-8.jpg"
+import drink_9 from "../../../../../images/drink-9.jpg"
 import burger_1 from "../../../../../images/burger-1.jpg"
 import burger_2 from "../../../../../images/burger-2.jpg"
 import burger_3 from "../../../../../images/burger-3.jpg"
@@ -16,6 +27,7 @@ const initState = {
     items: [
         {
             cate_id: 1,
+            cate_id_home: 1,
             id: 1,
             title: "Itallian Pizza",
             img: pizza_1,
@@ -24,23 +36,52 @@ const initState = {
         },
         {
             cate_id: 1,
+            cate_id_home: 1,
             id: 2,
-            title: "Itallian Pizza",
+            title: "Greek Pizza",
             img: pizza_2,
             desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
             price: 2.90
         },
         {
             cate_id: 1,
+            cate_id_home: 1,
             id: 3,
-            title: "Itallian Pizza",
+            title: "Caucasian Pizza",
             img: pizza_3,
             desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
             price: 2.90
         },
         {
-            cate_id: 2,
+            cate_id: 1,
+            cate_id_home: 2,
             id: 4,
+            title: "American Pizza",
+            img: pizza_4,
+            desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
+            price: 2.90
+        },
+        {
+            cate_id: 1,
+            cate_id_home: 2,
+            id: 5,
+            title: "Tomatoe Pie",
+            img: pizza_5,
+            desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
+            price: 2.90
+        },
+        {
+            cate_id: 1,
+            cate_id_home: 2,
+            id: 6,
+            title: "Margherita",
+            img: pizza_6,
+            desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
+            price: 2.90
+        },
+        {
+            cate_id: 2,
+            id: 7,
             title: "Itallian Pizza",
             img: drink_1,
             desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
@@ -48,7 +89,7 @@ const initState = {
         },
         {
             cate_id: 2,
-            id: 5,
+            id: 8,
             title: "Itallian Pizza",
             img: drink_2,
             desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
@@ -56,7 +97,7 @@ const initState = {
         },
         {
             cate_id: 2,
-            id: 6,
+            id: 9,
             title: "Itallian Pizza",
             img: drink_3,
             desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
@@ -64,7 +105,7 @@ const initState = {
         },
         {
             cate_id: 3,
-            id: 7,
+            id: 10,
             title: "Itallian Pizza",
             img: burger_1,
             desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
@@ -72,7 +113,7 @@ const initState = {
         },
         {
             cate_id: 3,
-            id: 8,
+            id: 11,
             title: "Itallian Pizza",
             img: burger_2,
             desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
@@ -80,7 +121,7 @@ const initState = {
         },
         {
             cate_id: 3,
-            id: 9,
+            id: 12,
             title: "Itallian Pizza",
             img: burger_3,
             desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
@@ -88,7 +129,7 @@ const initState = {
         },
         {
             cate_id: 4,
-            id: 10,
+            id: 13,
             title: "Itallian Pizza",
             img: pasta_1,
             desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
@@ -96,7 +137,7 @@ const initState = {
         },
         {
             cate_id: 4,
-            id: 11,
+            id: 14,
             title: "Itallian Pizza",
             img: pasta_2,
             desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
@@ -104,12 +145,76 @@ const initState = {
         },
         {
             cate_id: 4,
-            id: 12,
+            id: 15,
             title: "Itallian Pizza",
             img: pasta_3,
             desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
             price: 2.90
-        }
+        },
+        {
+            cate_id: 1,
+            id: 16,
+            title: "Itallian Pizza",
+            img: pizza_7,
+            desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
+            price: 2.90
+        },
+        {
+            cate_id: 1,
+            id: 17,
+            title: "Itallian Pizza",
+            img: pizza_8,
+            desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
+            price: 2.90
+        },
+        {
+            cate_id: 2,
+            id: 18,
+            title: "Itallian Pizza",
+            img: drink_4,
+            desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
+            price: 2.90
+        },
+        {
+            cate_id: 2,
+            id: 19,
+            title: "Itallian Pizza",
+            img: drink_5,
+            desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
+            price: 2.90
+        },
+        {
+            cate_id: 2,
+            id: 20,
+            title: "Itallian Pizza",
+            img: drink_6,
+            desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
+            price: 2.90
+        },
+        {
+            cate_id: 2,
+            id: 21,
+            title: "Itallian Pizza",
+            img: drink_7,
+            desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
+            price: 2.90
+        },
+        {
+            cate_id: 2,
+            id: 22,
+            title: "Itallian Pizza",
+            img: drink_8,
+            desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
+            price: 2.90
+        },
+        {
+            cate_id: 2,
+            id: 23,
+            title: "Itallian Pizza",
+            img: drink_9,
+            desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.",
+            price: 2.90
+        },
     ],
     addedItems: [],
     total: 0.0
