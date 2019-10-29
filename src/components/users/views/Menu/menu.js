@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {addToCart} from "../Cart/action/addToCart";
 import {connect} from "react-redux";
+import '../../../../css/shopping-cart.css'
+import StickyCart from "../Cart/sticky-cart";
 
 class MenuPage extends Component {
     handleClick = (id) => {
@@ -304,6 +306,7 @@ class MenuPage extends Component {
         });
         return (
             <div>
+                <StickyCart/>
                 <section
                     className="home-slider owl-carousel img"
                     style={{backgroundImage: "url(../../images/bg_1.jpg)"}}>

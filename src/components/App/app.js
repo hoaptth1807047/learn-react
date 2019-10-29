@@ -13,6 +13,7 @@ import AboutPage from "../users/views/About/about";
 import ContactPage from "../users/views/Contact/contact";
 import BlogPage from "../users/views/Blog/blog";
 import Cart from "../users/views/Cart/cart";
+import StickyCart from "../users/views/Cart/sticky-cart";
 import CategoryPage from "../users/views/Category/category";
 import SignUpPage from "../users/auth/SignUp/signup";
 import SignInPage from "../users/auth/SignIn/signin";
@@ -57,6 +58,7 @@ class App extends Component {
                     <Route path="/sign-up" component={SignUpPage}/>
                     <Route path="/sign-in" component={SignInPage}/>
                     <Route path="/cart" component={Cart}/>
+                    <Route path="/sticky-cart" component={StickyCart}/>
                     <Route path="/pw-forget" component={PasswordForgetPage}/>
                 </div>
             </Router>

@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import '../../../css/shopping-cart.css'
 
 import SignOutButton from '../auth/SignOut/singout';
 
@@ -24,33 +25,44 @@ const NavigationAuth = () => (
                 </button>
                 <div className="collapse navbar-collapse" id="ftco-nav">
                     <ul className="navbar-nav ml-auto">
-                        <li className="nav-item active"><div className="nav-link">
-                            <Link to="/home">Home</Link></div>
+                        <li className="nav-item active">
+                            <div className="nav-link">
+                                <Link to="/home">Home</Link></div>
                         </li>
-                        <li className="nav-item"><div className="nav-link">
-                            <Link to="/menu">Menu</Link></div>
+                        <li className="nav-item">
+                            <div className="nav-link">
+                                <Link to="/menu">Menu</Link></div>
                         </li>
-                        <li className="nav-item"><div className="nav-link">
-                            <Link to="/promotion">Promotion</Link></div>
+                        <li className="nav-item">
+                            <div className="nav-link">
+                                <Link to="/promotion">Promotion</Link></div>
                         </li>
-                        <li className="nav-item"><div className="nav-link">
-                            <Link to="/services">Services</Link></div>
+                        <li className="nav-item">
+                            <div className="nav-link">
+                                <Link to="/services">Services</Link></div>
                         </li>
-                        <li className="nav-item"><div className="nav-link">
-                            <Link to="/blog">Blog</Link>
-                        </div>
+                        <li className="nav-item">
+                            <div className="nav-link">
+                                <Link to="/blog">Blog</Link>
+                            </div>
                         </li>
-                        <li className="nav-item"><div className="nav-link">
-                            <Link to="/about">About</Link></div>
+                        <li className="nav-item">
+                            <div className="nav-link">
+                                <Link to="/about">About</Link></div>
                         </li>
-                        <li className="nav-item"><div className="nav-link">
-                            <Link to="/contact">Contact</Link></div>
+                        <li className="nav-item">
+                            <div className="nav-link">
+                                <Link to="/contact">Contact</Link></div>
                         </li>
-                        <li className="nav-item"><div className="nav-link">
-                            <Link to="/cart"><i className="icon-shopping_cart"/></Link></div>
+                        <li className="nav-item">
+                            <div className="nav-link">
+                                <Link to="/cart"><i className="icon-shopping_cart"/></Link></div>
                         </li>
-                        <li className="nav-item"><div className="nav-link">
-                            <SignOutButton/></div></li>
+                        <li className="nav-item">
+                            <div className="nav-link">
+                                <SignOutButton/>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -72,33 +84,42 @@ const NavigationNonAuth = () => (
                 </button>
                 <div className="collapse navbar-collapse" id="ftco-nav">
                     <ul className="navbar-nav ml-auto">
-                        <li className="nav-item active"><div className="nav-link">
-                            <Link to="/home">Home</Link></div>
+                        <li className="nav-item active">
+                            <div className="nav-link">
+                                <Link to="/home">Home</Link></div>
                         </li>
-                        <li className="nav-item"><div className="nav-link">
-                            <Link to="/menu">Menu</Link></div>
+                        <li className="nav-item">
+                            <div className="nav-link">
+                                <Link to="/menu">Menu</Link></div>
                         </li>
-                        <li className="nav-item"><div className="nav-link">
-                            <Link to="/promotion">Promotion</Link></div>
+                        <li className="nav-item">
+                            <div className="nav-link">
+                                <Link to="/promotion">Promotion</Link></div>
                         </li>
-                        <li className="nav-item"><div className="nav-link">
-                            <Link to="/services">Services</Link></div>
+                        <li className="nav-item">
+                            <div className="nav-link">
+                                <Link to="/services">Services</Link></div>
                         </li>
-                        <li className="nav-item"><div className="nav-link">
-                            <Link to="/blog">Blog</Link>
-                        </div>
+                        <li className="nav-item">
+                            <div className="nav-link">
+                                <Link to="/blog">Blog</Link>
+                            </div>
                         </li>
-                        <li className="nav-item"><div className="nav-link">
-                            <Link to="/about">About</Link></div>
+                        <li className="nav-item">
+                            <div className="nav-link">
+                                <Link to="/about">About</Link></div>
                         </li>
-                        <li className="nav-item"><div className="nav-link">
-                            <Link to="/contact">Contact</Link></div>
+                        <li className="nav-item">
+                            <div className="nav-link">
+                                <Link to="/contact">Contact</Link></div>
                         </li>
-                        <li className="nav-item"><div className="nav-link">
-                            <Link to="/cart"><i className="icon-shopping_cart"/></Link></div>
+                        <li className="nav-item">
+                            <div className="nav-link">
+                                <Link to="/cart"><i className="icon-shopping_cart"/></Link></div>
                         </li>
-                        <li className="nav-item"><div className="nav-link">
-                            <Link to="/sign-in">Sign In</Link></div>
+                        <li className="nav-item">
+                            <div className="nav-link">
+                                <Link to="/sign-in">Sign In</Link></div>
                         </li>
                     </ul>
                 </div>

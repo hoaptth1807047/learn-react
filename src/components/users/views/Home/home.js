@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux'
 import {addToCart} from "./../Cart/action/addToCart";
 import {Link} from "react-router-dom";
+import StickyCart from "../Cart/sticky-cart";
 
 class HomePage extends React.Component {
     handleClick = (id) => {
@@ -11,7 +12,7 @@ class HomePage extends React.Component {
 
     render() {
         const item_pizza = this.props.items.filter(item => item.cate_id === 1 && item.cate_id_home === 1);
-        const item_drink = this.props.items.filter(item => item.cate_id === 2);
+        const item_drink = this.props.items.filter(item => item.cate_id === 2 && item.cate_id_home === 3);
         const item_burger = this.props.items.filter(item => item.cate_id === 3);
         const item_pasta = this.props.items.filter(item => item.cate_id === 4);
         const item_pizza_hot1 = this.props.items.filter(item => item.cate_id === 1 && item.cate_id_home === 1);
@@ -470,6 +471,7 @@ class HomePage extends React.Component {
         });
         return (
             <div>
+                <StickyCart/>
                 <section className="home-slider owl-carousel img"
                          style={{backgroundImage: "url(" + '../../images/bg_1.jpg' + ")"}}>
                     <div className="slider-item">

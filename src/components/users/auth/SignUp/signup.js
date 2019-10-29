@@ -42,6 +42,7 @@ class SignUpFormBase extends Component {
             })
             .then(() => {
                 this.setState({...INITIAL_STATE});
+                alert("Register Success!!!");
                 this.props.history.push(ROUTES.HOME);
             })
             .catch(error => {
