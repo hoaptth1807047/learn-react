@@ -276,7 +276,9 @@ class HomePage extends React.Component {
                             <p>{item.desc}</p>
                             <p className="price"><span>${item.price}</span>
                                 <a className="ml-2 btn btn-white btn-outline-white"
-                                   onClick={() => {this.handleClick(item.id)}}>Order</a>
+                                   onClick={() => {
+                                       this.handleClick(item.id)
+                                   }}>Order</a>
                             </p>
                         </div>
                     </div>
@@ -457,7 +459,9 @@ class HomePage extends React.Component {
                             <p>{item.desc}</p>
                             <p className="price"><span>${item.price}</span>
                                 <a className="ml-2 btn btn-white btn-outline-white"
-                                   onClick={() => {this.handleClick(item.id)}}>Order</a>
+                                   onClick={() => {
+                                       this.handleClick(item.id)
+                                   }}>Order</a>
                             </p>
                         </div>
                     </div>
@@ -637,8 +641,8 @@ class HomePage extends React.Component {
                     </div>
                     <div className="container-wrap">
                         <div className="row no-gutters d-flex">
-                             {listItem_pizza_hot1}
-                             {listItem_pizza_hot2}
+                            {listItem_pizza_hot1}
+                            {listItem_pizza_hot2}
                         </div>
                     </div>
 
