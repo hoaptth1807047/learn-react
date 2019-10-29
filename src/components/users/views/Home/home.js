@@ -272,7 +272,9 @@ class HomePage extends React.Component {
                             <p>{item.desc}</p>
                             <p className="price"><span>${item.price}</span>
                                 <a className="ml-2 btn btn-white btn-outline-white"
-                                   onClick={() => {this.handleClick(item.id)}}>Order</a>
+                                   onClick={() => {
+                                       this.handleClick(item.id)
+                                   }}>Order</a>
                             </p>
                         </div>
                     </div>
@@ -290,7 +292,9 @@ class HomePage extends React.Component {
                             <p>{item.desc}</p>
                             <p className="price"><span>${item.price}</span>
                                 <a className="ml-2 btn btn-white btn-outline-white"
-                                   onClick={() => {this.handleClick(item.id)}}>Order</a>
+                                   onClick={() => {
+                                       this.handleClick(item.id)
+                                   }}>Order</a>
                             </p>
                         </div>
                     </div>
@@ -470,267 +474,9 @@ class HomePage extends React.Component {
                     </div>
                     <div className="container-wrap">
                         <div className="row no-gutters d-flex">
-                            <div className="col-lg-4 d-flex ftco-animate">
-                                <div className="services-wrap d-flex">
-                                    <a href="#" className="img btn btn-primary" data-toggle="modal"
-                                       data-target=".bd-example-modal-lg"
-                                       style={{backgroundImage: "url(" + '../../images/pizza-1.jpg' + ")"}}/>
-                                    <div className="modal fade bd-example-modal-lg" tabIndex={-1} role="dialog"
-                                         aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                        <div className="modal-dialog modal-lg">
-                                            <div className="modal-content"
-                                                 style={{backgroundImage: "url(" + '../../images/bg_4.jpg' + ")"}}>
-                                                <div className="col-form-label-lg">
-                                                    <div className="container" style={modalProducts}>
-                                                        <div className="card-deck mb-3 text-center">
-
-                                                            <div className="col-lg-5">
-                                                                <div className="text-center text-dark">
-                                                                    <h2 className="my-0 font-weight-normal"
-                                                                        style={{color: "#78d5ef"}}>Italian Pizza</h2>
-                                                                </div>
-                                                                <div className="card-body">
-                                                                    <h1 className="card-title pricing-card-title">$2.90 <small
-                                                                        className="text-muted">/ pcs</small></h1>
-                                                                    <ul className="list-unstyled mt-3 mb-4">
-                                                                        <li>Far far away, behind the word mountains, far
-                                                                            from the countries Vokalia and Consonantia
-                                                                        </li>
-                                                                    </ul>
-                                                                    <img className="img" src="../../images/pizza-1.jpg"
-                                                                         style={imgModelProducts}/>
-                                                                </div>
-                                                            </div>
-
-                                                            <div className="col-lg-7">
-                                                                <div className="text-lg-left tll1">
-                                                                    <h4 className="my-0 font-weight-normal"
-                                                                        style={{color: "#78d5ef"}}>Choose the cake
-                                                                        size</h4>
-                                                                    <div className="row">
-                                                                        <div className="col-1 text-lg-left">
-                                                                            <input type="radio"
-                                                                                   value="Medium size - 9 inches"
-                                                                                   name="gender"
-                                                                                   style={inputCheckSizeCake}/>
-                                                                        </div>
-                                                                        <div className="col-5">
-                                                                            <p style={{fontSize: 16}}>Medium size - 9
-                                                                                inches</p>
-                                                                        </div>
-                                                                        <div className="col-1">
-                                                                            <input type="radio"
-                                                                                   value="Large size - 12 inches"
-                                                                                   name="gender"
-                                                                                   style={inputCheckSizeCake}/>
-                                                                        </div>
-                                                                        <div className="col-5">
-                                                                            <p style={{fontSize: 16}}>Large size - 12
-                                                                                inches</p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div className="text-lg-left tll2">
-                                                                    <h4 className="my-0 font-weight-normal"
-                                                                        style={{color: "#78d5ef"}}>Choose the cake
-                                                                        base</h4>
-                                                                    <div className="row">
-                                                                        <div className="col-1 text-lg-left">
-                                                                            <input type="radio" value="Thin sole"
-                                                                                   name="gender"
-                                                                                   style={inputCheckSizeCake}/>
-                                                                        </div>
-                                                                        <div className="col-3">
-                                                                            <p style={{fontSize: 16}}>Thin sole</p>
-                                                                        </div>
-                                                                        <div className="col-1">
-                                                                            <input type="radio" value="Platform"
-                                                                                   name="gender"
-                                                                                   style={inputCheckSizeCake}/>
-                                                                        </div>
-                                                                        <div className="col-3">
-                                                                            <p style={{fontSize: 16}}>Platform</p>
-                                                                        </div>
-                                                                        <div className="col-1">
-                                                                            <input type="radio" value="Medium"
-                                                                                   name="gender"
-                                                                                   style={inputCheckSizeCake}/>
-                                                                        </div>
-                                                                        <div className="col-3">
-                                                                            <p style={{fontSize: 16}}>Medium</p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div className="text-lg-left tll3">
-                                                                    <h4 className="my-0 font-weight-normal"
-                                                                        style={{color: "#78d5ef"}}>Additional
-                                                                        options</h4>
-                                                                    <div className="text-lg-left">
-                                                                        <div className="row">
-                                                                            <input type="radio"
-                                                                                   value="Medium size - 9 inches"
-                                                                                   name="gender" style={inputOption}/>
-                                                                            <p style={titleOption}>Add the cheese
-                                                                                --------------- 2.0$</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="text-lg-left">
-                                                                        <div className="row">
-                                                                            <input type="radio"
-                                                                                   value="Large size - 12 inches"
-                                                                                   name="gender" style={inputOption}/>
-                                                                            <p style={titleOption}>Double the cheese
-                                                                                --------------- 4.0$</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="text-lg-left">
-                                                                        <div className="row">
-                                                                            <input type="radio"
-                                                                                   value="Large size - 12 inches"
-                                                                                   name="gender" style={inputOption}/>
-                                                                            <p style={titleOption}>Triple the cheese
-                                                                                --------------- 6.0$</p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div className="text-lg-left tll4">
-                                                                    <h4 className="my-0 font-weight-normal"
-                                                                        style={{color: "#78d5ef"}}>Border option</h4>
-                                                                    <div className="text-lg-left">
-                                                                        <div className="row">
-                                                                            <input type="radio"
-                                                                                   value="Medium size - 9 inches"
-                                                                                   name="gender" style={inputOption}/>
-                                                                            <p style={titleOption}>Cheese border
-                                                                                --------------- 25.0$</p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div className="card-body" style={{color: "#ffffff"}}>
-                                                                    <ul className="list-unstyled mt-3 mb-4">
-                                                                        <li style={{fontSize: 18}}>Discount 50% for 2nd Pizza - WEEKLY
-                                                                            promotion: Discount when buying 9 "/ 12"
-                                                                            pizza with lower price and same size. Free
-                                                                            30 'shipping with orders from 5.0$
-                                                                        </li>
-                                                                    </ul>
-                                                                    <button type="button" className="btn btn-lg btn-block btn-primary" style={{color: "#78d5ef"}}>
-                                                                        <p style={{fontSize: 17}}>Buy By Promotions</p>
-                                                                    </button>
-                                                                    <button type="button" className="btn btn-lg btn-block btn-primary" style={{color: "#78d5ef"}}>
-                                                                        <p style={{fontSize: 17}}>Normal Order</p>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div className="text p-4">
-                                        <h3>Italian Pizza</h3>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia
-                                            and
-                                            Consonantia </p>
-                                        <p className="price"><span>$2.90</span> <a href="#"
-                                                                                   className="ml-2 btn btn-white btn-outline-white">Order</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-lg-4 d-flex ftco-animate">
-                                <div className="services-wrap d-flex">
-                                    <a href="#" className="gallery img d-flex align-items-center"
-                                       style={{backgroundImage: "url(" + '../../images/pizza-2.jpg' + ")", height: 'auto'}}>
-                                        <div className="icon mb-4 d-flex align-items-center justify-content-center">
-                                            <span className="icon-search"/>
-                                        </div>
-                                    </a>
-                                    <div className="text p-4">
-                                        <h3>Greek Pizza</h3>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia
-                                            and
-                                            Consonantia</p>
-                                        <p className="price"><span>$2.90</span> <a href="#"
-                                                                                   className="ml-2 btn btn-white btn-outline-white">Order</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-lg-4 d-flex ftco-animate">
-                                <div className="services-wrap d-flex">
-                                    <a href="#" className="img"
-                                       style={{backgroundImage: "url(" + '../../images/pizza-3.jpg' + ")"}}/>
-                                    <div className="text p-4">
-                                        <h3>Caucasian Pizza</h3>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia
-                                            and
-                                            Consonantia</p>
-                                        <p className="price"><span>$2.90</span> <a href="#"
-                                                                                   className="ml-2 btn btn-white btn-outline-white">Order</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-lg-4 d-flex ftco-animate">
-                                <div className="services-wrap d-flex">
-                                    <a href="#" className="img order-lg-last"
-                                       style={{backgroundImage: "url(" + '../../images/pizza-4.jpg' + ")"}}/>
-                                    <div className="text p-4">
-                                        <h3>American Pizza</h3>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia
-                                            and
-                                            Consonantia </p>
-                                        <p className="price"><span>$2.90</span> <a href="#"
-                                                                                   className="ml-2 btn btn-white btn-outline-white">Order</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-lg-4 d-flex ftco-animate">
-                                <div className="services-wrap d-flex">
-                                    <a href="#" className="img order-lg-last"
-                                       style={{backgroundImage: "url(" + '../../images/pizza-5.jpg' + ")"}}/>
-                                    <div className="text p-4">
-                                        <h3>Tomatoe Pie</h3>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia
-                                            and
-                                            Consonantia</p>
-                                        <p className="price"><span>$2.90</span>
-                                            <a href="#" className="ml-2 btn btn-white btn-outline-white">Order</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-lg-4 d-flex ftco-animate">
-                                <div className="services-wrap d-flex">
-                                    <a href="#" className="img order-lg-last"
-                                       style={{backgroundImage: "url(" + '../../images/pizza-6.jpg' + ")"}}/>
-                                    <div className="text p-4">
-                                        <h3>Margherita</h3>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia
-                                            and
-                                            Consonantia</p>
-                                        <p className="price"><span>$2.90</span>
-                                            <a href="#" className="ml-2 btn btn-white btn-outline-white">Order</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-//                             {listItem_pizza_hot1}
-//                             {listItem_pizza_hot2}                        </div>
+                            {listItem_pizza_hot1}
+                            {listItem_pizza_hot2}
+                        </div>
                     </div>
 
                     {/*our menu pricing*/}

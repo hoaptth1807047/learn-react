@@ -3,26 +3,27 @@ import {
     BrowserRouter as Router,
     Route,
 } from 'react-router-dom';
-import Navigation from '../Navigation/navigation';
-// import HomeLocal from '../HomeLocal/homelocal';
-import SignUpPage from '../SignUp/signup';
-import SignInPage from '../SignIn/signin';
+
+import HomePage from '../users/views/Home/home';
+import Navigation from '../users/Navigation/navigation';
+import SignUpPage from '../users/auth/SignUp/signup';
+import SignInPage from '../users/auth/SignIn/signin';
 import { withFirebase } from '../Firebase';
-import MenuPage from '../Menu/menu';
-import PromotionPage from '../Promotion/promotion';
-import ServicesPage from '../Services/services';
-import AboutPage from '../About/about';
-import ContactPage from '../Contact/contact';
-import BlogPage from '../Blog/blog';
-import BlogSinglePage from '../Blog/blogsingle';
-import GalleryPage from '../Gallery/gallery';
-import CartPage from '../Cart/cart';
-// import PasswordForgetPage from '../PasswordForget';
-// import HomePage from '../Home';
+import MenuPage from '../users/views/Menu/menu';
+import PromotionPage from '../users/views/Promotion/promotion';
+import ServicesPage from '../users/views/Services/services';
+import AboutPage from '../users/views/About/about';
+import ContactPage from '../users/views/Contact/contact';
+import BlogPage from '../users/views/Blog/blog';
+import CategoryPage from "../users/views/Category/category";
+import Cart from '../users/views/Cart/cart';
+import PasswordForgetPage from '../users/auth/PasswordForget/index';
+// import BlogSinglePage from '../users/views/Blog/blogsingle';
+// import GalleryPage from '../users/views/Gallery/gallery';
+// import HomeLocal from '../HomeLocal/homelocal';
 // import AccountPage from '../Account';
 // import AdminPage from '../Admin';
-import * as ROUTES from '../constants/routes';
-import HomePage from "../Home";
+// import HomePage from "../Home";
 
 class App extends Component {
     constructor(props) {
@@ -49,7 +50,6 @@ class App extends Component {
             <Router>
                 <div>
                     <Navigation authUser={this.state.authUser}/>
-                    <hr/>
                 </div>
                 <div>
                     <Route path="/home" component={HomePage}/>
@@ -59,6 +59,7 @@ class App extends Component {
                     <Route path="/about" component={AboutPage}/>
                     <Route path="/contact" component={ContactPage}/>
                     <Route path="/blog" component={BlogPage}/>
+                    <Route path="/category" component={CategoryPage}/>
                     <Route path="/sign-up" component={SignUpPage}/>
                     <Route path="/sign-in" component={SignInPage}/>
                     <Route path="/cart" component={Cart}/>
