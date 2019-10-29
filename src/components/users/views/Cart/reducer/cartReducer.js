@@ -81,6 +81,7 @@ const initState = {
         },
         {
             cate_id: 2,
+            cate_id_home: 3,
             id: 7,
             title: "Itallian Pizza",
             img: drink_1,
@@ -89,6 +90,7 @@ const initState = {
         },
         {
             cate_id: 2,
+            cate_id_home: 3,
             id: 8,
             title: "Itallian Pizza",
             img: drink_2,
@@ -97,6 +99,7 @@ const initState = {
         },
         {
             cate_id: 2,
+            cate_id_home: 3,
             id: 9,
             title: "Itallian Pizza",
             img: drink_3,

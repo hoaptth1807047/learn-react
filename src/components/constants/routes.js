@@ -10,6 +10,7 @@ export const BLOG = '/blog';
 export const BLOGSINGLE = '/blogsingle';
 export const GALLERY = '/gallery';
 export const CART = '/cart';
+export const STICKY_CART = '/sticky-cart';
 export const ACCOUNT = '/account';
 export const ADMIN = '/admin';
 export const PASSWORD_FORGET = '/pw-forget';
