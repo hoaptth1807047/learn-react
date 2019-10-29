@@ -4,26 +4,20 @@ import {
     Route,
 } from 'react-router-dom';
 
-import HomePage from '../users/views/Home/home';
-import Navigation from '../users/Navigation/navigation';
-import SignUpPage from '../users/auth/SignUp/signup';
-import SignInPage from '../users/auth/SignIn/signin';
-import { withFirebase } from '../Firebase';
-import MenuPage from '../users/views/Menu/menu';
-import PromotionPage from '../users/views/Promotion/promotion';
-import ServicesPage from '../users/views/Services/services';
-import AboutPage from '../users/views/About/about';
-import ContactPage from '../users/views/Contact/contact';
-import BlogPage from '../users/views/Blog/blog';
+import Navigation from "../users/Navigation/navigation";
+import HomePage from "../users/views/Home/home";
+import MenuPage from "../users/views/Menu/menu";
+import PromotionPage from "../users/views/Promotion/promotion";
+import ServicesPage from "../users/views/Services/services";
+import AboutPage from "../users/views/About/about";
+import ContactPage from "../users/views/Contact/contact";
+import BlogPage from "../users/views/Blog/blog";
+import Cart from "../users/views/Cart/cart";
 import CategoryPage from "../users/views/Category/category";
-import Cart from '../users/views/Cart/cart';
-import PasswordForgetPage from '../users/auth/PasswordForget/index';
-// import BlogSinglePage from '../users/views/Blog/blogsingle';
-// import GalleryPage from '../users/views/Gallery/gallery';
-// import HomeLocal from '../HomeLocal/homelocal';
-// import AccountPage from '../Account';
-// import AdminPage from '../Admin';
-// import HomePage from "../Home";
+import SignUpPage from "../users/auth/SignUp/signup";
+import SignInPage from "../users/auth/SignIn/signin";
+import PasswordForgetPage from "../users/auth/PasswordForget";
+import {withFirebase} from "../Firebase";
 
 class App extends Component {
     constructor(props) {

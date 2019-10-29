@@ -102,9 +102,13 @@ class MenuPage extends Component {
             return (
                 <div className="col-lg-4 d-flex ftco-animate">
                     <div className="services-wrap d-flex">
-                        <a href="#" className="img btn" data-toggle="modal"
+                        <a className="gallery img d-flex align-items-center" data-toggle="modal"
                            data-target=".bd-example-modal-lg"
-                           style={{backgroundImage: "url(" + item.img + ")"}}/>
+                           style={{backgroundImage: "url(" + item.img + ")"}}>
+                            <div className="icon mb-4 d-flex align-items-center justify-content-center">
+                                <span className="icon-search"/>
+                            </div>
+                        </a>
                         <div className="modal fade bd-example-modal-lg" role="dialog"
                              aria-labelledby="myLargeModalLabel" aria-hidden="true">
                             <div className="modal-dialog modal-lg">
@@ -279,8 +283,13 @@ class MenuPage extends Component {
             return (
                 <div className="col-lg-4 d-flex ftco-animate">
                     <div className="services-wrap d-flex">
-                        <a href="#" className="img order-lg-last"
-                           style={{backgroundImage: "url(" + item.img + ")"}}/>
+                        <a className="img order-lg-last gallery d-flex align-items-center" data-toggle="modal"
+                           data-target=".bd-example-modal-lg"
+                           style={{backgroundImage: "url(" + item.img + ")"}}>
+                            <div className="icon mb-4 d-flex align-items-center justify-content-center">
+                                <span className="icon-search"/>
+                            </div>
+                        </a>
                         <div className="text p-4">
                             <h3>{item.title}</h3>
                             <p>{item.desc}</p>
