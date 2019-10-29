@@ -3,6 +3,7 @@ import {
     BrowserRouter as Router,
     Route,
 } from 'react-router-dom';
+
 import Navigation from "../users/Navigation/navigation";
 import HomePage from "../users/views/Home/home";
 import MenuPage from "../users/views/Menu/menu";
@@ -13,6 +14,7 @@ import ContactPage from "../users/views/Contact/contact";
 import BlogPage from "../users/views/Blog/blog";
 import Cart from "../users/views/Cart/cart";
 import StickyCart from "../users/views/Cart/sticky-cart";
+import CategoryPage from "../users/views/Category/category";
 import SignUpPage from "../users/auth/SignUp/signup";
 import SignInPage from "../users/auth/SignIn/signin";
 import PasswordForgetPage from "../users/auth/PasswordForget";
@@ -52,6 +54,7 @@ class App extends Component {
                     <Route path="/about" component={AboutPage}/>
                     <Route path="/contact" component={ContactPage}/>
                     <Route path="/blog" component={BlogPage}/>
+                    <Route path="/category" component={CategoryPage}/>
                     <Route path="/sign-up" component={SignUpPage}/>
                     <Route path="/sign-in" component={SignInPage}/>
                     <Route path="/cart" component={Cart}/>
