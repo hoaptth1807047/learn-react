@@ -26,8 +26,8 @@ class StickyCart extends React.Component {
             return (
                 <div key={item.id}>
                     <div className="row">
-                        <div>{item.title}</div>
-                        <div>{item.price}</div>
+                        <div>{item.quantity}-&nbsp;{item.title}&nbsp;-&nbsp;</div>
+                        <div>${item.price}</div>
                     </div>
                 </div>
             )
@@ -43,15 +43,13 @@ class StickyCart extends React.Component {
                     </a>
                 </div>
                 <div id="mySidepanel" className="sidepanel">
-                    <div>
                         <a className="closebtn"
                            onClick={() => {
                                this.closeNav()
-                           }}>×</a>
-                    </div>
+                           }}>&times;</a>
                     <div className="side-cart-title">
                         <div className="booking-detail">
-                            <p>Chi tiết đơn hàng</p>
+                            <p>Orders Detail:</p>
                             <div className="booking-table">
                                 {addedItems}
                             </div>

@@ -3,12 +3,26 @@ import {addToCart} from "../Cart/action/addToCart";
 import {connect} from "react-redux";
 import '../../../../css/shopping-cart.css'
 import StickyCart from "../Cart/sticky-cart";
+import Modal from "../Modal";
 
 class MenuPage extends Component {
+    state = {
+        showModal: 0
+    };
+
+    getModal = value => {
+        this.setState({showModal: value});
+    };
+
+    hideModal = value => {
+        this.setState({showModal: 0});
+    };
+
     handleClick = (id) => {
         this.props.addToCart(id);
         alert("Add item!")
     };
+
     render() {
         const item_pizza = this.props.items.filter(item => item.cate_id === 1);
         const item_drink = this.props.items.filter(item => item.cate_id === 2);
@@ -104,171 +118,24 @@ class MenuPage extends Component {
             return (
                 <div className="col-lg-4 d-flex ftco-animate">
                     <div className="services-wrap d-flex">
-                        <a className="gallery img d-flex align-items-center" data-toggle="modal"
-                           data-target=".bd-example-modal-lg"
+                        <a className="gallery img d-flex align-items-center"
+                           data-toggle="modal" data-target=".bd-example-modal-lg"
+                           onClick={() => {
+                               this.getModal(item.id);
+                           }}
                            style={{backgroundImage: "url(" + item.img + ")"}}>
                             <div className="icon mb-4 d-flex align-items-center justify-content-center">
                                 <span className="icon-search"/>
                             </div>
                         </a>
-                        <div className="modal fade bd-example-modal-lg" role="dialog"
-                             aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                            <div className="modal-dialog modal-lg">
-                                <div className="modal-content"
-                                     style={{backgroundImage: "url(" + '../../images/bg_4.jpg' + ")"}}>
-                                    <div className="col-form-label-lg container card-deck mb-3 text-center"
-                                         style={modalProducts}>
-                                        <div className="col-lg-5">
-                                            <div className="text-center text-dark">
-                                                <h2 className="my-0 font-weight-normal"
-                                                    style={{color: "#78d5ef"}}>{item.title}</h2>
-                                            </div>
-                                            <div className="card-body">
-                                                <h1 className="card-title pricing-card-title">${item.price}<small
-                                                    className="text-muted">/ pcs</small></h1>
-                                                <ul className="list-unstyled mt-3 mb-4">
-                                                    <li>
-                                                        {item.desc}
-                                                    </li>
-                                                </ul>
-                                                <img className="img" src="../../images/pizza-1.jpg"
-                                                     style={imgModelProducts}/>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-7">
-                                            <div className="text-lg-left tll1">
-                                                <h4 className="my-0 font-weight-normal"
-                                                    style={{color: "#78d5ef"}}>Choose the cake
-                                                    size</h4>
-                                                <div className="row">
-                                                    <div className="col-1 text-lg-left">
-                                                        <input type="radio"
-                                                               value="Medium size - 9 inches"
-                                                               name="gender"
-                                                               style={inputCheckSizeCake}/>
-                                                    </div>
-                                                    <div className="col-5">
-                                                        <p style={{fontSize: 16}}>Medium size - 9
-                                                            inches</p>
-                                                    </div>
-                                                    <div className="col-1">
-                                                        <input type="radio"
-                                                               value="Large size - 12 inches"
-                                                               name="gender"
-                                                               style={inputCheckSizeCake}/>
-                                                    </div>
-                                                    <div className="col-5">
-                                                        <p style={{fontSize: 16}}>Large size - 12
-                                                            inches</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div className="text-lg-left tll2">
-                                                <h4 className="my-0 font-weight-normal"
-                                                    style={{color: "#78d5ef"}}>Choose the cake
-                                                    base</h4>
-                                                <div className="row">
-                                                    <div className="col-1 text-lg-left">
-                                                        <input type="radio" value="Thin sole"
-                                                               name="gender"
-                                                               style={inputCheckSizeCake}/>
-                                                    </div>
-                                                    <div className="col-3">
-                                                        <p style={{fontSize: 16}}>Thin sole</p>
-                                                    </div>
-                                                    <div className="col-1">
-                                                        <input type="radio" value="Platform"
-                                                               name="gender"
-                                                               style={inputCheckSizeCake}/>
-                                                    </div>
-                                                    <div className="col-3">
-                                                        <p style={{fontSize: 16}}>Platform</p>
-                                                    </div>
-                                                    <div className="col-1">
-                                                        <input type="radio" value="Medium"
-                                                               name="gender"
-                                                               style={inputCheckSizeCake}/>
-                                                    </div>
-                                                    <div className="col-3">
-                                                        <p style={{fontSize: 16}}>Medium</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div className="text-lg-left tll3">
-                                                <h4 className="my-0 font-weight-normal"
-                                                    style={{color: "#78d5ef"}}>Additional
-                                                    options</h4>
-                                                <div className="text-lg-left">
-                                                    <div className="row">
-                                                        <input type="radio"
-                                                               value="Medium size - 9 inches"
-                                                               name="gender" style={inputOption}/>
-                                                        <p style={titleOption}>Add the cheese
-                                                            --------------- 2.0$</p>
-                                                    </div>
-                                                </div>
-                                                <div className="text-lg-left">
-                                                    <div className="row">
-                                                        <input type="radio"
-                                                               value="Large size - 12 inches"
-                                                               name="gender" style={inputOption}/>
-                                                        <p style={titleOption}>Double the cheese
-                                                            --------------- 4.0$</p>
-                                                    </div>
-                                                </div>
-                                                <div className="text-lg-left">
-                                                    <div className="row">
-                                                        <input type="radio"
-                                                               value="Large size - 12 inches"
-                                                               name="gender" style={inputOption}/>
-                                                        <p style={titleOption}>Triple the cheese
-                                                            --------------- 6.0$</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div className="text-lg-left tll4">
-                                                <h4 className="my-0 font-weight-normal"
-                                                    style={{color: "#78d5ef"}}>Border option</h4>
-                                                <div className="text-lg-left">
-                                                    <div className="row">
-                                                        <input type="radio"
-                                                               value="Medium size - 9 inches"
-                                                               name="gender" style={inputOption}/>
-                                                        <p style={titleOption}>Cheese border
-                                                            --------------- 25.0$</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div className="card-body" style={{color: "#ffffff"}}>
-                                                <ul className="list-unstyled mt-3 mb-4">
-                                                    <li style={{fontSize: 18}}>Discount 50% for 2nd Pizza -
-                                                        WEEKLY
-                                                        promotion: Discount when buying 9 "/ 12"
-                                                        pizza with lower price and same size. Free
-                                                        30 'shipping with orders from 5.0$
-                                                    </li>
-                                                </ul>
-                                                <button type="button"
-                                                        className="btn btn-lg btn-block btn-primary"
-                                                        style={{color: "#78d5ef"}}>
-                                                    <p style={{fontSize: 17}}>Buy By Promotions</p>
-                                                </button>
-                                                <button type="button"
-                                                        className="btn btn-lg btn-block btn-primary"
-                                                        style={{color: "#78d5ef"}}>
-                                                    <p style={{fontSize: 17}}>Normal Order</p>
-                                                </button>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <Modal class="modal fade" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"
+                               show={this.state.showModal === item.id}
+                               onHide={() => this.hideModal(item.id)}
+                               title={item.title}
+                               img={item.img}
+                               desc={item.desc}
+                               price={item.price}
+                        />
                         <div className="text p-4">
                             <h3>{item.title}</h3>
                             <p>{item.desc}</p>

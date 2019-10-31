@@ -25,6 +25,9 @@ class Cart extends Component {
                                      style={{height: '100px', with: '100px'}}/>
                             </td>
                             <td>
+                                {item.title}
+                            </td>
+                            <td>
                                 {item.quantity}
                                 <div className="add-remove">
                                     <div>
@@ -79,9 +82,8 @@ class Cart extends Component {
                                     <thead>
                                     <tr>
                                         <th scope="col" style={titleCart}>Product</th>
+                                        <th scope="col" style={titleCart}/>
                                         <th scope="col" style={titleCart}>Quantity</th>
-                                        <th scope="col" style={titleCart}>Unit Price</th>
-                                        <th scope="col" style={titleCart}>Total</th>
                                         <th scope="col"/>
                                     </tr>
                                     </thead>

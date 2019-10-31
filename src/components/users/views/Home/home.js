@@ -114,7 +114,7 @@ class HomePage extends React.Component {
                                 <span className="icon-search"/>
                             </div>
                         </a>
-                        <div className="modal fade bd-example-modal-lg" role="dialog"
+                        <div className="modal fade" role="dialog"
                              aria-labelledby="myLargeModalLabel" aria-hidden="true">
                             <div className="modal-dialog modal-lg">
                                 <div className="modal-content"
@@ -298,7 +298,7 @@ class HomePage extends React.Component {
                             </div>
                         </a>
                         <div className="modal fade bd-example-modal-lg" role="dialog"
-                             aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                             aria-hidden="true">
                             <div className="modal-dialog modal-lg">
                                 <div className="modal-content"
                                      style={{backgroundImage: "url(" + '../../images/bg_4.jpg' + ")"}}>
