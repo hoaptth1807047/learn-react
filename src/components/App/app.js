@@ -19,6 +19,7 @@ import SignUpPage from "../users/auth/SignUp/signup";
 import SignInPage from "../users/auth/SignIn/signin";
 import PasswordForgetPage from "../users/auth/PasswordForget";
 import {withFirebase} from "../Firebase";
+import ShowModal from "../users/views/Modal";
 
 class App extends Component {
     constructor(props) {
@@ -59,6 +60,7 @@ class App extends Component {
                     <Route path="/sign-in" component={SignInPage}/>
                     <Route path="/cart" component={Cart}/>
                     <Route path="/sticky-cart" component={StickyCart}/>
+                    <Route path="/show-modal" component={ShowModal}/>
                     <Route path="/pw-forget" component={PasswordForgetPage}/>
                 </div>
             </Router>
