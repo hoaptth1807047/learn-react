@@ -11,6 +11,7 @@ import PromotionPage from "../users/views/Promotion/promotion";
 import ServicesPage from "../users/views/Services/services";
 import AboutPage from "../users/views/About/about";
 import ContactPage from "../users/views/Contact/contact";
+import PayPage from "../users/views/Pay/pay";
 import BlogPage from "../users/views/Blog/blog";
 import Cart from "../users/views/Cart/cart";
 import StickyCart from "../users/views/Cart/sticky-cart";
@@ -53,6 +54,7 @@ class App extends Component {
                     <Route path="/services" component={ServicesPage}/>
                     <Route path="/about" component={AboutPage}/>
                     <Route path="/contact" component={ContactPage}/>
+                    <Route path="/pay" component={PayPage}/>
                     <Route path="/blog" component={BlogPage}/>
                     <Route path="/category" component={CategoryPage}/>
                     <Route path="/sign-up" component={SignUpPage}/>

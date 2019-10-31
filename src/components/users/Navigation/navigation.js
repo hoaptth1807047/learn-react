@@ -56,6 +56,10 @@ const NavigationAuth = () => (
                         </li>
                         <li className="nav-item">
                             <div className="nav-link">
+                                <Link to="/pay">Pay</Link></div>
+                        </li>
+                        <li className="nav-item">
+                            <div className="nav-link">
                                 <Link to="/cart"><i className="icon-shopping_cart"/></Link></div>
                         </li>
                         <li className="nav-item">
@@ -112,6 +116,10 @@ const NavigationNonAuth = () => (
                         <li className="nav-item">
                             <div className="nav-link">
                                 <Link to="/contact">Contact</Link></div>
+                        </li>
+                        <li className="nav-item">
+                            <div className="nav-link">
+                                <Link to="/pay">Pay</Link></div>
                         </li>
                         <li className="nav-item">
                             <div className="nav-link">

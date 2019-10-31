@@ -62,21 +62,6 @@
   To begin the development, run `npm start` or `yarn start`.
   To create a production bundle, use `npm run build` or `yarn build`.
 -->
-<script type="text/javascript">
-    $("nav div").click(function () {
-        $("ul").slideToggle();
-        $("ul ul").css("display", "none");
-    });
-    $("ul li").click(function () {
-        $("ul ul").slideUp();
-        $(this).find('ul').slideToggle();
-    });
-    $(window).resize(function () {
-        if ($(window).width() > 768) {
-            $("ul").removeAttr('style');
-        }
-    });
-</script>
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery-migrate-3.0.1.min.js"></script>
 <script src="js/popper.min.js"></script>
