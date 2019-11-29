@@ -1,6 +1,6 @@
 export const SIGN_UP = '/sign-up';
 export const SIGN_IN = '/sign-in';
-export const HOME = '/home';
+export const HOME = '/';
 export const MENU = '/menu';
 export const PROMOTION = '/promotion';
 export const SERVICES = '/services';
@@ -13,6 +13,4 @@ export const CART = '/cart';
 export const STICKY_CART = '/sticky-cart';
 export const PAY = '/pay';
 export const SHOW_MODAL = '/show-modal';
-export const ACCOUNT = '/account';
-export const ADMIN = '/admin';
 export const PASSWORD_FORGET = '/pw-forget';
