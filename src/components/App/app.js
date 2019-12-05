@@ -51,6 +51,7 @@ class App extends Component {
                 <div>
                     <Route path='/show/:id' component={Modal} />
                     <Route path="/home" component={HomePage}/>
+
                     <Route path="/menu" component={MenuPage}/>
                     <Route path="/promotion" component={PromotionPage}/>
                     <Route path="/services" component={ServicesPage}/>

@@ -1,6 +1,7 @@
-import app from 'firebase/app'
-import 'firebase/auth'
-import 'firebase/database'
+import app from 'firebase/app';
+import 'firebase/firestore';
+import 'firebase/auth';
+import 'firebase/firestore';
 
 const config = {
     apiKey: "AIzaSyA9jLLgGd7FCfDguvxHnQg5R7SsnUZxEBg",
@@ -13,12 +14,21 @@ const config = {
     measurementId: "G-DTM9RNMR5N"
 };
 
-class Firesbase {
+class Firebase {
     constructor() {
         app.initializeApp(config);
+
+        /* Helper */
+
+        /* Firebase APIs */
+
         this.auth = app.auth();
-        this.db = app.database();
+        this.db = app.firestore();
+
+        /* Social Sign In Method Provider */
     }
+
+    // *** Auth API ***
 
     doCreateUserWithEmailAndPassword = (email, password) =>
         this.auth.createUserWithEmailAndPassword(email, password);
@@ -33,8 +43,50 @@ class Firesbase {
     doPasswordUpdate = password =>
         this.auth.currentUser.updatePassword(password);
 
-    user = uid => this.db.ref(`users/${uid}`);
-    users = () => this.db.ref('users');
+    // *** Merge Auth and DB User API *** //
+
+    onAuthUserListener = (next, fallback) => {
+        return this.auth.onAuthStateChanged(authUser => {
+            if (authUser) {
+                this.user(authUser.uid)
+                    .get()
+                    .then(snapshot => {
+                        const dbUser = snapshot.data();
+
+                        // default empty roles
+                        // if (!dbUser.roles) {
+                        //   dbUser.roles = {};
+                        // }
+
+                        // merge auth and db user
+                        authUser = {
+                            uid: authUser.uid,
+                            email: authUser.email,
+                            emailVerified: authUser.emailVerified,
+                            providerData: authUser.providerData,
+                            ...dbUser,
+                        };
+
+                        next(authUser);
+                    });
+            } else {
+                fallback();
+            }
+        });
+    };
+
+    // *** User API ***
+
+    user = uid => this.db.doc(`users/${uid}`);
+
+    users = () => this.db.collection('users');
+
+    // *** Message API ***
+
+    message = uid => this.db.doc(`messages/${uid}`);
+
+    messages = () => this.db.collection('messages');
 }
 
-export default Firesbase;
+
+export default Firebase;

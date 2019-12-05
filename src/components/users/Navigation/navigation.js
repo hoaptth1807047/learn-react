@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import '../../../css/shopping-cart.css'
+import '../../../css/shopping-cart.css';
 
 import SignOutButton from '../auth/SignOut/singout';
 
