@@ -10780,6 +10780,18 @@ h1, h2, h3, h4, h5,
     color: #fff;
 }
 
+.btn{
+    background: none;!important;
+}
+.btn.btn-mybtn{
+    color: white;
+}
+
+.btn.btn-mybtn:hover{
+    color: #0b0b0b;
+    background-color: #fac564;
+}
+
 .btn.btn-white.btn-outline-white {
     border-color: rgba(255, 255, 255, 0.8);
     background: none;
