@@ -25,6 +25,7 @@ class StickyCart extends React.Component {
         let addedItems = this.props.items.map(item => {
             return (
                 <div key={item.id}>
+                    <div id="demo"></div>
                     <div className="row">
                         <div>{item.quantity}-&nbsp;{item.title}&nbsp;-&nbsp;</div>
                         <div>${item.price}</div>

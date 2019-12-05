@@ -88,4 +88,5 @@ class Firebase {
     messages = () => this.db.collection('messages');
 }
 
+
 export default Firebase;

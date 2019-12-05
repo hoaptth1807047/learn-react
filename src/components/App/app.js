@@ -19,8 +19,8 @@ import SignUpPage from "../users/auth/SignUp/signup";
 import SignInPage from "../users/auth/SignIn/signin";
 import PasswordForgetPage from "../users/auth/PasswordForget";
 import {withFirebase} from "../Firebase";
-import ShowModal from "../users/views/Modal";
 import Pay from "../users/views/Pay";
+import Modal from "../users/views/Modal";
 
 class App extends Component {
     constructor(props) {
@@ -49,7 +49,9 @@ class App extends Component {
                     <Navigation authUser={this.state.authUser}/>
                 </div>
                 <div>
-                    <Route exact path="/" component={HomePage}/>
+                    <Route path='/show/:id' component={Modal} />
+                    <Route path="/home" component={HomePage}/>
+
                     <Route path="/menu" component={MenuPage}/>
                     <Route path="/promotion" component={PromotionPage}/>
                     <Route path="/services" component={ServicesPage}/>
@@ -62,11 +64,10 @@ class App extends Component {
                     <Route path="/cart" component={Cart}/>
                     <Route path="/pay" component={Pay}/>
                     <Route path="/sticky-cart" component={StickyCart}/>
-                    <Route path="/show-modal" component={ShowModal}/>
                     <Route path="/pw-forget" component={PasswordForgetPage}/>
                 </div>
             </Router>
-        );
+        )
     }
 }
 

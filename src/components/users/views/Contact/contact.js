@@ -13,7 +13,7 @@ class ContactPage extends Component {
                             <div className="row slider-text justify-content-center align-items-center">
                                 <div className="col-md-7 col-sm-12 text-center ftco-animate">
                                     <h1 className="mb-3 mt-5 bread">Contact Us</h1>
-                                    <p className="breadcrumbs"><span className="mr-2"><a href=""><Link to={ROUTES.HOME}>Home</Link></a></span>
+                                    <p className="breadcrumbs"><span className="mr-2"><Link to={ROUTES.HOME}>Home</Link></span>
                                         <span>Contact</span></p>
                                 </div>
                             </div>
