@@ -5,6 +5,13 @@ import {
 } from 'react-router-dom';
 
 import Navigation from "../users/Navigation/navigation";
+
+import {withFirebase} from "../Firebase";
+
+import SignUpPage from "../users/auth/SignUp/signup";
+import SignInPage from "../users/auth/SignIn/signin";
+import PasswordForgetPage from "../users/auth/PasswordForget/passwordforget";
+
 import HomePage from "../users/views/Home/home";
 import MenuPage from "../users/views/Menu/menu";
 import PromotionPage from "../users/views/Promotion/promotion";
@@ -12,15 +19,14 @@ import ServicesPage from "../users/views/Services/services";
 import AboutPage from "../users/views/About/about";
 import ContactPage from "../users/views/Contact/contact";
 import BlogPage from "../users/views/Blog/blog";
+import BlogSinglePage from "../users/views/Blog/blogsingle";
+import CategoryPage from "../users/views/Category/category";
+
+import Pay from "../users/views/Payment/payment";
 import Cart from "../users/views/Cart/cart";
 import StickyCart from "../users/views/Cart/sticky-cart";
-import CategoryPage from "../users/views/Category/category";
-import SignUpPage from "../users/auth/SignUp/signup";
-import SignInPage from "../users/auth/SignIn/signin";
-import PasswordForgetPage from "../users/auth/PasswordForget";
-import {withFirebase} from "../Firebase";
-import Pay from "../users/views/Pay";
-import Modal from "../users/views/Modal";
+
+import Modal from "../users/views/Modal/modal";
 
 class App extends Component {
     constructor(props) {
@@ -50,20 +56,23 @@ class App extends Component {
                 </div>
                 <div>
                     <Route path='/show/:id' component={Modal} />
-                    <Route path="/home" component={HomePage}/>
 
+                    <Route path="/home" component={HomePage}/>
                     <Route path="/menu" component={MenuPage}/>
                     <Route path="/promotion" component={PromotionPage}/>
                     <Route path="/services" component={ServicesPage}/>
                     <Route path="/about" component={AboutPage}/>
                     <Route path="/contact" component={ContactPage}/>
                     <Route path="/blog" component={BlogPage}/>
+                    <Route path="/blogsingle" component={BlogSinglePage}/>
                     <Route path="/category" component={CategoryPage}/>
                     <Route path="/sign-up" component={SignUpPage}/>
                     <Route path="/sign-in" component={SignInPage}/>
+
                     <Route path="/cart" component={Cart}/>
                     <Route path="/pay" component={Pay}/>
                     <Route path="/sticky-cart" component={StickyCart}/>
+
                     <Route path="/pw-forget" component={PasswordForgetPage}/>
                 </div>
             </Router>

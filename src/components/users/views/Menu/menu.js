@@ -458,11 +458,11 @@ class Menu extends Component {
     constructor(props) {
         super(props);
         this.ref = firebase.firestore().collection('products');
-        this.pizza = this.ref.where('roles', '==', 'PIZZA')
-        this.drink = this.ref.where('roles', '==', 'DRINK')
-        this.burger = this.ref.where('roles','==','BURGER')
-        this.pasta = this.ref.where('roles','==','PASTA')
-        this.un = null
+        this.pizza = this.ref.where('roles', '==', 'PIZZA');
+        this.drink = this.ref.where('roles', '==', 'DRINK');
+        this.burger = this.ref.where('roles','==','BURGER');
+        this.pasta = this.ref.where('roles','==','PASTA');
+        this.un = null;
         this.state = {
             products: [],
             productdrink: [],
@@ -472,47 +472,48 @@ class Menu extends Component {
     }
 
     onCollection = (snapShot) => {
-        const products = []
+        const products = [];
         snapShot.forEach((doc) => {
             const {name, url, title, price, roles} = doc.data();
             products.push({name, url, title, price, roles})
-        })
+        });
         this.setState({
             products
         })
-    }
+    };
+
     onCollectionDrink = (snapShot) => {
-        const productdrink = []
+        const productdrink = [];
         snapShot.forEach((doc) => {
             const {name, url, title, price, roles} = doc.data();
             productdrink.push({name, url, title, price, roles})
-        })
+        });
         this.setState({
             productdrink
         })
-    }
+    };
 
     onCollectionBurger = (snapShot) => {
-        const productburger = []
+        const productburger = [];
         snapShot.forEach((doc) => {
             const {name, url, title, price, roles} = doc.data();
             productburger.push({name, url, title, price, roles})
-        })
+        });
         this.setState({
             productburger
         })
-    }
+    };
 
     onCollectionPasta = (snapShot) => {
-        const productpasta = []
+        const productpasta = [];
         snapShot.forEach((doc) => {
             const {name, url, title, price, roles} = doc.data();
             productpasta.push({name, url, title, price, roles})
-        })
+        });
         this.setState({
             productpasta
         })
-    }
+    };
 
     componentDidMount() {
         this.un = this.pizza.onSnapshot(this.onCollection);
@@ -692,7 +693,6 @@ class Menu extends Component {
                                                     className="nav-link active"
                                                     id="v-pills-1-tab"
                                                     data-toggle="pill"
-                                                    href="#v-pills-1"
                                                     role="tab"
                                                     aria-controls="v-pills-1"
                                                     aria-selected="true"
@@ -703,7 +703,6 @@ class Menu extends Component {
                                                     className="nav-link"
                                                     id="v-pills-2-tab"
                                                     data-toggle="pill"
-                                                    href="#v-pills-2"
                                                     role="tab"
                                                     aria-controls="v-pills-2"
                                                     aria-selected="false"
@@ -714,7 +713,6 @@ class Menu extends Component {
                                                     className="nav-link"
                                                     id="v-pills-3-tab"
                                                     data-toggle="pill"
-                                                    href="#v-pills-3"
                                                     role="tab"
                                                     aria-controls="v-pills-3"
                                                     aria-selected="false"
@@ -725,7 +723,6 @@ class Menu extends Component {
                                                     className="nav-link"
                                                     id="v-pills-4-tab"
                                                     data-toggle="pill"
-                                                    href="#v-pills-4"
                                                     role="tab"
                                                     aria-controls="v-pills-4"
                                                     aria-selected="false"

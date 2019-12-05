@@ -73,7 +73,7 @@ class BlogSinglePage extends Component {
                                 </div>
                                 <div className="about-author d-flex">
                                     <div className="bio align-self-md-center mr-5">
-                                        <img src="../../../../images/person_4.jpg" alt="Image placeholder" className="img-fluid mb-4" />
+                                        <img src="../../../../images/image_1.jpg" alt="" className="img-fluid" />
                                     </div>
                                     <div className="desc align-self-md-center">
                                         <h3>Lance Smith</h3>
@@ -194,12 +194,12 @@ class BlogSinglePage extends Component {
                                                 <textarea name id="message" cols={30} rows={10} className="form-control" defaultValue={""} />
                                             </div>
                                             <div className="form-group">
-                                                <input type="submit" defaultValue="Post Comment" className="btn py-3 px-4 btn-primary" />
+                                                <input type="submit" defaultValue="Post Comment" value="Send" className="btn py-3 px-4 btn-primary" />
                                             </div>
                                         </form>
                                     </div>
                                 </div>
-                            </div> {/* .col-md-8 */}
+                            </div>
                             <div className="col-md-4 sidebar ftco-animate">
                                 <div className="sidebar-box">
                                     <form action="#" className="search-form">
