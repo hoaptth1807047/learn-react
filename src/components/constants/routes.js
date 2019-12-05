@@ -12,7 +12,6 @@ export const GALLERY = '/gallery';
 export const CART = '/cart';
 export const STICKY_CART = '/sticky-cart';
 export const PAY = '/pay';
-export const SHOW_MODAL = '/show-modal';
 export const ACCOUNT = '/account';
 export const ADMIN = '/admin';
 export const PASSWORD_FORGET = '/pw-forget';
