@@ -80,19 +80,46 @@ class HomePage extends React.Component {
         alert("Add item!")
     };
 
-    onSave = () => {
-        console.log(this.state.id)
-        alert(1)
+    onSave = (id) => {
+        firebase.firestore().collection('products').doc(id).then(() => {
+            console.log(id)
+        })
     };
 
     render() {
         return (
             <div>
-                <input type="checkbox" name='check' value="123"/>
-                <input type="checkbox" name='check1' value="1a23"/>
-                <input type="checkbox" name='check2' value="12aa"/>
-                <button onClick={this.onSave}>sss</button>
-                <div id='demo'></div>
+                {this.state.products.slice(0, 1).map(item => (
+                    <div className="col-lg-4 d-flex ftco-animate">
+                        <div className="services-wrap d-flex">
+                            <div className="text p-4">
+                                <h3>{item.name}</h3>
+                                <p>
+                                    {item.title}
+                                </p>
+                                <p className="price">
+                                    <span>${item.price}</span>{" "}
+                                    <Link onClick={this.onSave} to={`/show/${item.key}`}>detail</Link>
+                                    <a href="#" className="ml-2 btn btn-white btn-outline-white">
+                                        Order
+                                    </a>
+                                </p>
+                            </div>
+                            <a href="#" className="img gallery d-flex align-items-center"
+                               data-toggle="modal" data-target=".bd-example-modal-lg"
+                               style={{backgroundImage: "url(" + item.url + ")"}}
+                            >
+                                <div className="icon mb-4 d-flex align-items-center justify-content-center">
+                                    <span className="icon-search"/>
+                                </div>
+                            </a>
+                            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+                                 aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                <Modal/>
+                            </div>
+                        </div>
+                    </div>
+                ))}
                 <StickyCart/>
                 <section
                     className="home-slider owl-carousel img"
@@ -333,7 +360,8 @@ class HomePage extends React.Component {
                                                 <span className="icon-search"/>
                                             </div>
                                         </a>
-                                        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+                                             aria-labelledby="myLargeModalLabel" aria-hidden="true">
                                             <Modal/>
                                         </div>
                                     </div>
